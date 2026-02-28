@@ -10,17 +10,16 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Custom Colors for v4 inline */
+  --color-nirmal-green: #2e8b2b;
+  --color-nirmal-darkgreen: #0a6931;
+  --color-nirmal-yellow: #fbbb21;
+  --color-nirmal-lightyellow: #fde8bc;
+  --color-nirmal-lightgreen: #cce0cd;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
