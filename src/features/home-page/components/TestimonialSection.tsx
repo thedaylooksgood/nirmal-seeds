@@ -11,7 +11,7 @@ export function TestimonialSection() {
 
     return (
         <section className="w-full pt-16 pb-24 px-4 bg-nirmal-lightyellow flex flex-col items-center text-center">
-            <div className="container mx-auto max-w-4xl relative">
+            <div className="section-container max-w-4xl relative">
 
                 <Text as="h2" className="mb-16 text-black border-b-[3px] border-nirmal-darkgreen inline-block pb-1 px-2 uppercase tracking-wide text-[28px] sm:text-[32px] font-light">
                     FARMER <span className="font-extrabold ml-1">TESTIMONIAL</span>

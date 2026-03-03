@@ -27,7 +27,7 @@ function AwardCard({ award }: { award: typeof awardsData.awards[0] }) {
 export function AwardsSection() {
     return (
         <section className="w-full py-20 bg-gradient-to-b from-nirmal-lightgreen via-white to-white relative pb-28">
-            <div className="container mx-auto max-w-4xl text-center px-4">
+            <div className="section-container text-center">
                 <Text as="h2" className="mb-14 text-nirmal-darkgreen font-light text-[28px] sm:text-[32px] tracking-normal">
                     <span className="text-[#595959]">AWARDS &</span>
                     <span className="font-bold ml-2">ACHIEVEMENTS</span>

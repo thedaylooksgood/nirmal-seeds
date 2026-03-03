@@ -13,7 +13,7 @@ const IconMap: Record<string, React.ReactNode> = {
 export function NetworkSection() {
     return (
         <section className="w-full pt-20 pb-24 bg-white">
-            <div className="container mx-auto px-4 lg:px-8 text-center">
+            <div className="section-container text-center">
                 {networkData.title.split('\n').map((line, i) => (
                     <Text
                         key={i}

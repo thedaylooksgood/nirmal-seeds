@@ -12,7 +12,7 @@ export function ProductCategories() {
             <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-nirmal-lightgreen/40 z-0"></div>
             <div className="absolute bottom-0 w-[120%] left-[-10%] h-[50%] bg-[url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop')] bg-cover bg-top opacity-30 z-0 mask-image-gradient"></div>
 
-            <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center flex flex-col items-center">
+            <div className="section-container relative z-10 text-center flex flex-col items-center">
                 <Text as="h2" className="mb-12 text-nirmal-darkgreen text-[28px] sm:text-[34px] tracking-normal">
                     <span className="font-light text-[#8c8c8c] mr-2">PRODUCT</span>
                     <span className="font-bold">CATEGORIES</span>

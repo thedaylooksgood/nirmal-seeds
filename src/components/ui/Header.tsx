@@ -1,5 +1,6 @@
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 export interface NavItem {
@@ -10,43 +11,50 @@ export interface NavItem {
 
 export interface HeaderProps {
     navItems: NavItem[]
-    logoPlaceholderText?: string
 }
 
-export function Header({ navItems, logoPlaceholderText = "NIRMAL SEEDS" }: HeaderProps) {
+export function Header({ navItems }: HeaderProps) {
     return (
-        <header className="sticky top-0 z-50 w-full bg-white shadow-sm h-16 lg:h-[76px]">
-            <div className="container mx-auto flex h-full items-center justify-between px-4 lg:px-8">
+        <header className="sticky top-0 z-50 w-full bg-white shadow-[0_1px_3px_rgba(0,0,0,0.08)] border-b border-gray-100">
+            <div className="section-container flex h-[74px] lg:h-[84px] items-center justify-between">
 
                 {/* LOGO */}
-                <div className="flex h-full items-center py-2">
-                    <Link href="/">
-                        <div className="flex h-12 w-12 lg:h-[60px] lg:w-[60px] items-center justify-center border-2 lg:border-[2.5px] border-nirmal-darkgreen bg-white shadow-sm rounded-sm">
-                            <span className="text-[7.5px] lg:text-[9px] leading-tight text-center font-extrabold text-nirmal-darkgreen uppercase">
-                                {logoPlaceholderText.split(" ").map((w, i) => (
-                                    <React.Fragment key={i}>
-                                        {w}<br />
-                                    </React.Fragment>
-                                ))}
-                            </span>
-                        </div>
-                    </Link>
-                </div>
+                <Link
+                    href="/"
+                    className="flex-shrink-0 group"
+                >
+                    <div className="relative h-[64px] w-[64px] lg:h-[76px] lg:w-[76px] transition-transform duration-300 group-hover:scale-105">
+                        <Image
+                            src="/nirmal-seeds-logo.png"
+                            alt="Nirmal Seeds"
+                            fill
+                            sizes="76px"
+                            className="object-contain drop-shadow-sm"
+                            priority
+                        />
+                    </div>
+                </Link>
 
-                {/* NAV */}
-                <nav className="hidden md:flex flex-1 items-center justify-end h-full">
+                {/* NAV — right aligned */}
+                <nav className="hidden md:flex items-center h-full">
                     {navItems.map((item, index) => (
                         <Link
                             key={index}
                             href={item.href}
                             className={cn(
-                                "h-full flex items-center px-4 lg:px-6 text-[12.5px] lg:text-[13.5px] font-bold uppercase tracking-widest transition-colors duration-300",
+                                "relative h-full flex items-center px-7 lg:px-9",
+                                "text-[12px] lg:text-[13.5px] font-semibold tracking-[0.08em] transition-all duration-300",
                                 item.isActive
                                     ? "bg-nirmal-green text-white"
-                                    : "text-gray-800 hover:text-nirmal-green bg-transparent"
+                                    : "text-gray-800 hover:text-nirmal-green",
+                                !item.isActive && "group/nav"
                             )}
                         >
                             {item.label}
+                            {/* Animated underline on hover */}
+                            {!item.isActive && (
+                                <span className="absolute bottom-[18px] left-1/2 -translate-x-1/2 w-0 h-[2px] bg-nirmal-green rounded-full transition-all duration-300 group-hover/nav:w-[60%]" />
+                            )}
                         </Link>
                     ))}
                 </nav>

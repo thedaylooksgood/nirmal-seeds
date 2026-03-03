@@ -3,6 +3,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* ── Layout Tokens (Industry Standard — Google / YouTube / GitHub) ── */
+  --site-max-width: 1280px;
+  --site-padding-x: 1rem;
+  /* 16px — mobile   */
+  --site-padding-x-md: 1.5rem;
+  /* 24px — tablet   */
+  --site-padding-x-lg: 2rem;
+  /* 32px — desktop  */
 }
 
 @theme inline {
@@ -22,4 +31,37 @@ body {
   background: var(--background);
   color: var(--foreground);
   overflow-x: hidden;
+}
+
+/*
+ * ── Global Section Container ──
+ * Industry-standard responsive layout (matching Google, YouTube, GitHub).
+ * Single source of truth — change the CSS variables above to resize everything.
+ *
+ *   Mobile  (<768px)  → 16px padding
+ *   Tablet  (≥768px)  → 24px padding
+ *   Desktop (≥1024px) → 32px padding
+ *   Content max-width → 1280px
+ */
+.section-container {
+  width: 100%;
+  max-width: var(--site-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--site-padding-x);
+  padding-right: var(--site-padding-x);
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    padding-left: var(--site-padding-x-md);
+    padding-right: var(--site-padding-x-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-container {
+    padding-left: var(--site-padding-x-lg);
+    padding-right: var(--site-padding-x-lg);
+  }
 }

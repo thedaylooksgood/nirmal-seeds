@@ -11,7 +11,7 @@ export function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-white/40 to-transparent" />
 
             {/* Align content with the logo in the header (container px-4 lg:px-8) */}
-            <div className="container relative z-10 mx-auto px-4 lg:px-8 mt-[-10%] sm:mt-[-5%]">
+            <div className="section-container relative z-10 mt-[-10%] sm:mt-[-5%]">
                 <div className="max-w-[800px]">
                     <Text as="h1" className="drop-shadow-sm mb-1 text-[38px] sm:text-[50px] md:text-[56px] lg:text-[66px] leading-[1.1] tracking-normal text-nirmal-darkgreen font-normal">
                         INNOVATION THAT<br />EMPOWERS THE FUTURE.
