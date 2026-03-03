@@ -60,6 +60,7 @@ export function Footer({ sections, copyrightText, bottomLinks }: FooterProps) {
                     <div className="flex flex-wrap space-x-4 sm:space-x-6">
                         <Link href="/" className="hover:text-white transition-colors">Home</Link>
                         <Link href="/about" className="hover:text-white transition-colors">About Us</Link>
+                        <Link href="/management" className="hover:text-white transition-colors">Management</Link>
                         <Link href="/products" className="hover:text-white transition-colors">Products</Link>
                         <Link href="/patent" className="hover:text-white transition-colors">Patent</Link>
                         <Link href="/csr" className="hover:text-white transition-colors">CSR & R&D</Link>
