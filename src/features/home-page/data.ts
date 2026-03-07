@@ -201,5 +201,5 @@ export const footerData = {
             ]
         }
     ],
-    copyrightText: "Copyright © 2024 Nirmal Seeds Ltd.,. All Rights Reserved."
+    copyrightText: "Copyright ©️ 2026 Nirmal Seeds Ltd. All rights reserved. Crafted by Greysell."
 }
