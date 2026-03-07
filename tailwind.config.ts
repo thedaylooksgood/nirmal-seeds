@@ -10,6 +10,20 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                sans: ['var(--font-raleway)', 'sans-serif'],
+            },
+            fontWeight: {
+                thin: '400',
+                extralight: '400',
+                light: '400',
+                normal: '400',
+                medium: '600',
+                semibold: '600',
+                bold: '600',
+                extrabold: '600',
+                black: '600',
+            },
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",

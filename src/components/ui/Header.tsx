@@ -81,8 +81,8 @@ export function Header({ navItems }: HeaderProps) {
                                 <Link
                                     href={item.href}
                                     className={cn(
-                                        "relative h-full flex items-center px-4 lg:px-6",
-                                        "text-[12px] lg:text-[13px] font-bold tracking-wider uppercase transition-all duration-300",
+                                        "relative h-full flex items-center px-5 lg:px-7",
+                                        "text-[13px] lg:text-[15px] font-semibold tracking-wider uppercase transition-all duration-300",
                                         active
                                             ? "text-nirmal-green"
                                             : "text-gray-700 hover:text-nirmal-green",
@@ -105,7 +105,7 @@ export function Header({ navItems }: HeaderProps) {
                                             <Link
                                                 key={idx}
                                                 href={child.href}
-                                                className="block px-6 py-2.5 text-[12px] lg:text-[13px] text-gray-700 hover:bg-nirmal-green hover:text-white transition-colors duration-200 font-semibold"
+                                                className="block px-7 py-3 text-[13px] lg:text-[15px] text-gray-700 hover:bg-nirmal-green hover:text-white transition-colors duration-200 font-semibold"
                                             >
                                                 {child.label}
                                             </Link>
@@ -149,7 +149,7 @@ export function Header({ navItems }: HeaderProps) {
                                     <button
                                         onClick={() => toggleMobileSubmenu(item.label)}
                                         className={cn(
-                                            "p-4 rounded-xl text-[16px] font-bold tracking-wide transition-all duration-300 flex items-center justify-between",
+                                            "p-5 rounded-xl text-[18px] font-semibold tracking-wide transition-all duration-300 flex items-center justify-between",
                                             active || isOpen
                                                 ? "bg-nirmal-green text-white shadow-md shadow-green-100"
                                                 : "bg-white text-gray-800 border border-gray-100"
@@ -163,7 +163,7 @@ export function Header({ navItems }: HeaderProps) {
                                         href={item.href}
                                         onClick={() => setIsMenuOpen(false)}
                                         className={cn(
-                                            "p-4 rounded-xl text-[16px] font-bold tracking-wide transition-all duration-300 flex items-center justify-between",
+                                            "p-5 rounded-xl text-[18px] font-semibold tracking-wide transition-all duration-300 flex items-center justify-between",
                                             active
                                                 ? "bg-nirmal-green text-white shadow-md shadow-green-100"
                                                 : "bg-white text-gray-800 border border-gray-100"
@@ -184,7 +184,7 @@ export function Header({ navItems }: HeaderProps) {
                                                 key={idx}
                                                 href={child.href}
                                                 onClick={() => setIsMenuOpen(false)}
-                                                className="p-3 rounded-lg text-[14px] font-semibold text-gray-700 bg-white border border-gray-50 hover:text-nirmal-green shadow-sm"
+                                                className="p-4 rounded-lg text-[16px] font-semibold text-gray-700 bg-white border border-gray-50 hover:text-nirmal-green shadow-sm"
                                             >
                                                 {child.label}
                                             </Link>
