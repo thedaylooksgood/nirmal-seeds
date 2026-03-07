@@ -195,9 +195,9 @@ export const footerData = {
         {
             title: "Contact Us",
             links: [
-                { label: "PO Box No. 63, Bhadgaon Road, Pachora, Jalgaon (MS)", href: "#" },
-                { label: "+91 2596 244444 (100 Lines)", href: "tel:+912596244444" },
-                { label: "info@nirmalseedsindia.com", href: "mailto:info@nirmalseedsindia.com" }
+                { label: "P.O.Box No.: 63, Bhadgaon Road, Pachora-424201. Jalgaon (MH).", href: "#" },
+                { label: "Phone : +91-2596-244366", href: "tel:+912596244366" },
+                { label: "Email: info@nirmalseedsindia.com", href: "mailto:info@nirmalseedsindia.com" }
             ]
         }
     ],
