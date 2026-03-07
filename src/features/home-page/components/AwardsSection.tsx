@@ -26,7 +26,7 @@ function AwardCard({ award }: { award: typeof awardsData.awards[0] }) {
 
 export function AwardsSection() {
     return (
-        <section className="w-full py-20 bg-gradient-to-b from-nirmal-lightgreen via-white to-white relative pb-28">
+        <section className="w-full py-20 relative pb-28" style={{ background: 'linear-gradient(to bottom, #BFDBAB 0%, #BFDBAB 35%, #ffffff 100%)' }}>
             <div className="section-container text-center">
                 <Text as="h2" className="mb-14 text-nirmal-darkgreen font-light text-[28px] sm:text-[32px] tracking-normal">
                     <span className="text-[#595959]">AWARDS &</span>
@@ -37,9 +37,10 @@ export function AwardsSection() {
                     <GenericCarousel
                         options={{ align: "start", loop: true }}
                         navigationClassName="bg-black hover:bg-black/80 rounded-sm w-7 h-7 sm:w-8 sm:h-8 text-white"
+                        slideClassName="flex-[0_0_100%] md:flex-[0_0_50%]"
                     >
                         {awardsData.awards.map((award, index) => (
-                            <div key={index} className="w-full md:w-1/2 p-2 h-full">
+                            <div key={index} className="w-full p-2 h-full">
                                 <AwardCard award={award} />
                             </div>
                         ))}

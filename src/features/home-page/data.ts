@@ -125,11 +125,11 @@ export const testimonialData = {
 
 // Global Nav Data
 export const navItems = [
-    { label: "Home", href: "/", isActive: true },
+    { label: "Home", href: "/" },
     { label: "Overview", href: "/about" },
-    { label: "Products", href: "/products" },
-    { label: "Department", href: "/department" },
-    { label: "Patent", href: "/patent" },
+    { label: "Products", href: "/products/field-crops" },
+    { label: "Department", href: "/department/production-processing" },
+
     { label: "CSR @ Nirmal", href: "/csr" },
     { label: "Media", href: "/media" },
     { label: "Contact Us", href: "/contact" },
@@ -144,18 +144,18 @@ export const footerData = {
         {
             title: "Nirmal Departments",
             links: [
-                { label: "Research & Development", href: "/department" },
-                { label: "Quality Assurance", href: "/department" },
-                { label: "Seed Processing", href: "/department" },
-                { label: "Biotech Lab Facilities", href: "/department" }
+                { label: "Research & Development", href: "/department/production-processing" },
+                { label: "Quality Assurance", href: "/department/production-processing" },
+                { label: "Seed Processing", href: "/department/production-processing" },
+                { label: "Biotech Lab Facilities", href: "/department/production-processing" }
             ]
         },
         {
             title: "Products",
             links: [
-                { label: "Field Crops", href: "/products" },
-                { label: "Vegetable Crops", href: "/products" },
-                { label: "Biofortified", href: "/products" }
+                { label: "Field Crops", href: "/products/field-crops" },
+                { label: "Vegetable Crops", href: "/products/field-crops" },
+                { label: "Biofortified", href: "/products/field-crops" }
             ]
         },
         {
