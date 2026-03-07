@@ -5,7 +5,10 @@ import { StaticImageData } from "next/image"
 
 export const heroData = {
     title: "INNOVATION THAT EMPOWERS THE FUTURE.\nSOLUTIONS THAT ENRICH LIVES.",
-    backgroundImage: "/images/home-page/hero-banner.png",
+    backgroundImage: [
+        "/images/home-page/hero-banner.png",
+        "/images/home-page/hero-banner-2.png"
+    ],
 }
 
 export const companyGlanceData = {
@@ -124,16 +127,47 @@ export const testimonialData = {
 }
 
 // Global Nav Data
-export const navItems = [
-    { label: "Home", href: "/" },
-    { label: "Overview", href: "/about" },
-    { label: "Products", href: "/products/field-crops" },
-    { label: "Department", href: "/department/production-processing" },
+export interface NavItem {
+    label: string
+    href: string
+    children?: { label: string; href: string }[]
+}
 
+export const navItems: NavItem[] = [
+    { label: "Home", href: "/" },
+    {
+        label: "Overview",
+        href: "/about",
+        children: [
+            { label: "About Us", href: "/about" },
+            { label: "Management", href: "/management" },
+            { label: "Accreditation", href: "/accreditation" },
+        ]
+    },
+    {
+        label: "Products",
+        href: "/products",
+        children: [
+            { label: "Field Crops", href: "/products/field-crops" },
+            { label: "Vegetable Seeds", href: "/products/vegetable-seeds" },
+            { label: "Bio Products", href: "/products/bio-products" },
+        ]
+    },
+    {
+        label: "Departments",
+        href: "/department",
+        children: [
+            { label: "Research & Development", href: "/department/r-d" },
+            { label: "Quality Assurance", href: "/department/quality-assurance" },
+            { label: "Production & Processing", href: "/department/production-processing" },
+            { label: "Bio Tech & Input division", href: "/department/biotech-input" },
+        ]
+    },
     { label: "CSR @ Nirmal", href: "/csr" },
     { label: "Media", href: "/media" },
     { label: "Contact Us", href: "/contact" },
 ]
+
 
 export const footerData = {
     sections: [

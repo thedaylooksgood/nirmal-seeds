@@ -4,13 +4,14 @@ import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export interface NavItem {
     label: string
     href: string
     isActive?: boolean
+    children?: { label: string; href: string }[]
 }
 
 export interface HeaderProps {
@@ -20,10 +21,12 @@ export interface HeaderProps {
 export function Header({ navItems }: HeaderProps) {
     const pathname = usePathname();
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const [openMobileSubmenu, setOpenMobileSubmenu] = React.useState<string | null>(null);
 
     // Close menu when route changes
     React.useEffect(() => {
         setIsMenuOpen(false);
+        setOpenMobileSubmenu(null);
     }, [pathname]);
 
     // Prevent scroll when menu is open
@@ -37,6 +40,10 @@ export function Header({ navItems }: HeaderProps) {
             document.body.style.overflow = 'unset';
         };
     }, [isMenuOpen]);
+
+    const toggleMobileSubmenu = (label: string) => {
+        setOpenMobileSubmenu(openMobileSubmenu === label ? null : label);
+    }
 
     return (
         <header className="sticky top-0 z-50 w-full bg-white shadow-sm border-b border-gray-100">
@@ -67,28 +74,45 @@ export function Header({ navItems }: HeaderProps) {
                             ? pathname === "/"
                             : pathname.startsWith(item.href);
 
+                        const hasChildren = item.children && item.children.length > 0;
+
                         return (
-                            <Link
-                                key={index}
-                                href={item.href}
-                                className={cn(
-                                    "relative h-full flex items-center px-6 lg:px-8",
-                                    "text-[12px] lg:text-[13px] font-bold tracking-wider uppercase transition-all duration-300",
-                                    active
-                                        ? "bg-nirmal-green text-white"
-                                        : "text-gray-700 hover:text-nirmal-green hover:bg-gray-50",
-                                )}
-                            >
-                                <span className="relative z-10">{item.label}</span>
+                            <div key={index} className="relative h-full group">
+                                <Link
+                                    href={item.href}
+                                    className={cn(
+                                        "relative h-full flex items-center px-4 lg:px-6",
+                                        "text-[12px] lg:text-[13px] font-bold tracking-wider uppercase transition-all duration-300",
+                                        active
+                                            ? "text-nirmal-green"
+                                            : "text-gray-700 hover:text-nirmal-green",
+                                    )}
+                                >
+                                    <span className="relative z-10 flex items-center gap-1">
+                                        {item.label}
+                                        {hasChildren && <ChevronDown size={14} className="transition-transform duration-300 group-hover:rotate-180" />}
+                                    </span>
 
-                                {active && (
-                                    <span className="absolute bottom-0 left-0 w-full h-[4px] bg-nirmal-darkgreen/30" />
-                                )}
+                                    {active && (
+                                        <span className="absolute bottom-0 left-0 w-full h-[3px] bg-nirmal-green" />
+                                    )}
+                                </Link>
 
-                                {!active && (
-                                    <span className="absolute bottom-[20px] left-1/2 -translate-x-1/2 w-0 h-[2px] bg-nirmal-green/40 rounded-full transition-all duration-300 group-hover:w-[40%]" />
+                                {/* DESKTOP DROPDOWN */}
+                                {hasChildren && (
+                                    <div className="absolute top-full left-0 w-64 bg-white shadow-xl border border-gray-100 py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50 rounded-b-lg">
+                                        {item.children?.map((child, idx) => (
+                                            <Link
+                                                key={idx}
+                                                href={child.href}
+                                                className="block px-6 py-2.5 text-[12px] lg:text-[13px] text-gray-700 hover:bg-nirmal-green hover:text-white transition-colors duration-200 font-semibold"
+                                            >
+                                                {child.label}
+                                            </Link>
+                                        ))}
+                                    </div>
                                 )}
-                            </Link>
+                            </div>
                         )
                     })}
                 </nav>
@@ -116,23 +140,58 @@ export function Header({ navItems }: HeaderProps) {
                             ? pathname === "/"
                             : pathname.startsWith(item.href);
 
+                        const hasChildren = item.children && item.children.length > 0;
+                        const isOpen = openMobileSubmenu === item.label;
+
                         return (
-                            <Link
-                                key={index}
-                                href={item.href}
-                                onClick={() => setIsMenuOpen(false)}
-                                className={cn(
-                                    "p-4 rounded-xl text-[16px] font-bold tracking-wide transition-all duration-300 flex items-center justify-between",
-                                    active
-                                        ? "bg-nirmal-green text-white shadow-md shadow-green-100"
-                                        : "bg-white text-gray-800 hover:bg-white hover:text-nirmal-green border border-gray-100"
+                            <div key={index} className="flex flex-col">
+                                {hasChildren ? (
+                                    <button
+                                        onClick={() => toggleMobileSubmenu(item.label)}
+                                        className={cn(
+                                            "p-4 rounded-xl text-[16px] font-bold tracking-wide transition-all duration-300 flex items-center justify-between",
+                                            active || isOpen
+                                                ? "bg-nirmal-green text-white shadow-md shadow-green-100"
+                                                : "bg-white text-gray-800 border border-gray-100"
+                                        )}
+                                    >
+                                        {item.label}
+                                        <ChevronDown size={20} className={cn("transition-transform duration-300", isOpen && "rotate-180")} />
+                                    </button>
+                                ) : (
+                                    <Link
+                                        href={item.href}
+                                        onClick={() => setIsMenuOpen(false)}
+                                        className={cn(
+                                            "p-4 rounded-xl text-[16px] font-bold tracking-wide transition-all duration-300 flex items-center justify-between",
+                                            active
+                                                ? "bg-nirmal-green text-white shadow-md shadow-green-100"
+                                                : "bg-white text-gray-800 border border-gray-100"
+                                        )}
+                                    >
+                                        {item.label}
+                                    </Link>
                                 )}
-                            >
-                                {item.label}
-                                {active && (
-                                    <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
+
+                                {/* MOBILE SUBMENU */}
+                                {hasChildren && (
+                                    <div className={cn(
+                                        "overflow-hidden transition-all duration-300 ease-in-out flex flex-col pl-4 mt-2 space-y-2",
+                                        isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+                                    )}>
+                                        {item.children?.map((child, idx) => (
+                                            <Link
+                                                key={idx}
+                                                href={child.href}
+                                                onClick={() => setIsMenuOpen(false)}
+                                                className="p-3 rounded-lg text-[14px] font-semibold text-gray-700 bg-white border border-gray-50 hover:text-nirmal-green shadow-sm"
+                                            >
+                                                {child.label}
+                                            </Link>
+                                        ))}
+                                    </div>
                                 )}
-                            </Link>
+                            </div>
                         )
                     })}
 
@@ -155,3 +214,4 @@ export function Header({ navItems }: HeaderProps) {
         </header>
     )
 }
+
