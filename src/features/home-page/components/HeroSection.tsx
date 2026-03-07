@@ -28,7 +28,7 @@ export function HeroSection() {
 
     return (
         <section
-            className="relative w-full h-[500px] sm:h-[600px] md:h-[650px] lg:h-[700px] max-h-[700px] flex items-start pt-32 md:pt-40 lg:pt-48 bg-gray-900 overflow-hidden"
+            className="relative w-full h-[500px] sm:h-[600px] md:h-[650px] lg:h-[700px] max-h-[700px] flex items-start pt-8 md:pt-12 lg:pt-16 bg-gray-900 overflow-hidden"
         >
             {/* Background Images with Crossfade */}
             {images.map((img, index) => (
@@ -45,10 +45,10 @@ export function HeroSection() {
             {/* Align content with the logo in the header (container px-4 lg:px-8) */}
             <div className="section-container relative z-20">
                 <div className="max-w-[800px]">
-                    <Text as="h1" className="drop-shadow-sm mb-1 text-[38px] sm:text-[50px] md:text-[56px] lg:text-[66px] leading-[1.1] tracking-normal text-nirmal-darkgreen font-normal">
+                    <Text as="h1" className="text-[36px] sm:text-[46px] md:text-[56px] lg:text-[64px] leading-[1.1] tracking-normal text-nirmal-darkgreen font-light">
                         INNOVATION THAT<br />EMPOWERS THE FUTURE.
                     </Text>
-                    <Text as="h1" className="drop-shadow-sm text-[42px] sm:text-[54px] md:text-[60px] lg:text-[72px] leading-[1.05] tracking-tight text-black font-extrabold mt-2">
+                    <Text as="h1" className="text-[36px] sm:text-[46px] md:text-[56px] lg:text-[64px] leading-[1.1] tracking-normal text-black font-semibold mt-2">
                         SOLUTIONS THAT<br />ENRICH LIVES.
                     </Text>
                 </div>
