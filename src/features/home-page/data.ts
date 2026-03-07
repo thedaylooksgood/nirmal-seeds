@@ -5,8 +5,7 @@ import { StaticImageData } from "next/image"
 
 export const heroData = {
     title: "INNOVATION THAT EMPOWERS THE FUTURE.\nSOLUTIONS THAT ENRICH LIVES.",
-    backgroundImage: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2070&auto=format&fit=crop",
-    // Placeholder close to the farming hand image
+    backgroundImage: "/images/home-page/hero-banner.png",
 }
 
 export const companyGlanceData = {
@@ -35,20 +34,20 @@ export const productCategoriesData = {
             title: "Field Crops",
             subtitle: "(Hybrid & Improved Varieties)",
             description: "Nirmal Seeds develops and markets innovative hybrids and varieties across major crops to meet agricultural and food demands.",
-            image: "https://images.unsplash.com/photo-1596728514809-b68a8ababc24?q=80&w=2070&auto=format&fit=crop",
+            image: "/images/home-page/product-categories-field-crops.png",
             link: "#"
         },
         {
             title: "Vegetable Seeds",
             subtitle: "(Hybrid & Improved Varieties)",
             description: "A rapidly growing segment supported by advanced breeding program targeting global distribution.",
-            image: "https://images.unsplash.com/photo-1592924357228-91a5aadc08d4?q=80&w=2670&auto=format&fit=crop",
+            image: "/images/home-page/product-categories-vegetable-seeds.png",
             link: "#"
         },
         {
             title: "Nutritionally Enriched / Biofortified Crops",
             description: "Nirmal Seeds is deeply invested in the biofortified ecosystem globally, partnering with ICAR.",
-            image: "https://images.unsplash.com/photo-1500937386664-56d1dfefcb19?q=80&w=2070&auto=format&fit=crop",
+            image: "/images/home-page/product-categories-biofortified-crops.png",
             link: "#"
         }
     ]
@@ -84,20 +83,21 @@ export const awardsData = {
         {
             title: "BIRAC Innovator Award - 2020",
             description: "Awarded for breakthrough research in agricultural biotechnology.",
-            image: "https://images.unsplash.com/photo-1531545514251-26ec03987258?q=80&w=2074&auto=format&fit=crop"
+            image: "/images/home-page/awards-birac.png"
         },
         {
             title: "Vasantrao Naik Krushi Pratishthan Award",
             description: "The Chief Minister of Maharashtra, Hon. Shri Devendra Fadnavis presenting the Vasantrao Naik Krushi Puraskar.",
-            image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2074&auto=format&fit=crop"
+            image: "/images/home-page/awards-vasantro-award.png"
         },
         {
             title: "State Level Best Seed Company",
             description: "Recognized by the Ministry of Agriculture for outstanding contribution.",
-            image: "https://images.unsplash.com/photo-1531545514251-26ec03987258?q=80&w=2074&auto=format&fit=crop"
+            image: "/images/home-page/awards-state-level.png"
         }
     ]
 }
+
 
 export const testimonialData = {
     title: "FARMER TESTIMONIAL",
