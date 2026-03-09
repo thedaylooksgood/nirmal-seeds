@@ -58,26 +58,26 @@ export const productCategoriesData = {
 
 export const networkData = {
     title: "NIRMAL SEEDS - A STRONG\nNATIONWIDE DISTRIBUTION NETWORK",
-    description: "Nirmal Seeds operates one of India's largest seed distribution networks spanning across major states.",
+    description: "Nirmal Seeds operates one of India's largest seed distribution networks, reaching farmers across the country through:",
     stats: [
         {
             icon: "users",
-            title: "5,000+ dealers\nand distributors"
+            title: "6,000+ dealers\nand distributors"
         },
         {
             icon: "map-pin",
-            title: "32 regional offices & depots\nstrategically located in\nhigh-demand markets"
+            title: "22 regional offices & depots\nstrategically located in\nhigh-demand markets"
         },
         {
             icon: "globe",
-            title: "33 states covered\nacross all major\nagro-climatic zones"
+            title: "23 states covered\nacross all major\nagro-climatic zones"
         },
         {
             icon: "truck",
-            title: "A robust supply chain\nsupporting 179+ seed products\nacross 32 major crops"
+            title: "A robust supply chain\nsupporting 177+ seed products\nand 22 bio-organic inputs"
         }
     ],
-    footerText: "This extensive network ensures consistent market access and predictable, uninterrupted seed supply to mitigate farmer's risk."
+    footerText: "This extensive network ensures consistent market access, predictable demand, rapid product adoption, and strong brand visibility."
 }
 
 export const awardsData = {
@@ -109,19 +109,19 @@ export const testimonialData = {
             text: "I have been farming for the past 20 years and have always relied on Nirmal Seeds for my crops. The yield is consistently high and the seed quality is excellent. I highly recommend them to all farmers.",
             author: "Shri Ashokrao Bhamare",
             location: "Village Andur, Taluka & District Osmanabad",
-            image: "https://i.pravatar.cc/150?img=11"
+            image: "/images/home-page/testimonial-section-1.png"
         },
         {
             text: "The vegetable seeds from Nirmal Seeds are disease resistant and provide a great harvest. My income has grown significantly.",
             author: "Ramesh Patil",
             location: "Pune, Maharashtra",
-            image: "https://i.pravatar.cc/150?img=12"
+            image: "/images/home-page/testimonial-section-2.png"
         },
         {
             text: "Exceptional quality and great customer support from the local depots. Best seeds in the market.",
             author: "Vikram Singh",
             location: "Indore, MP",
-            image: "https://i.pravatar.cc/150?img=13"
+            image: "/images/home-page/testimonial-section-3.png"
         }
     ]
 }

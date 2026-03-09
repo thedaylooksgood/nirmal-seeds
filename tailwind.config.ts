@@ -13,26 +13,15 @@ const config: Config = {
             fontFamily: {
                 sans: ['var(--font-raleway)', 'sans-serif'],
             },
-            fontWeight: {
-                thin: '400',
-                extralight: '400',
-                light: '400',
-                normal: '400',
-                medium: '600',
-                semibold: '600',
-                bold: '600',
-                extrabold: '600',
-                black: '600',
-            },
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
                 nirmal: {
-                    green: "#268222",
-                    darkgreen: "#0b5828",
-                    yellow: "#fab31f",
+                    green: "#5ad304ff",
+                    darkgreen: "#3c8e00ff",
+                    yellow: "#fbb016",
                     lightyellow: "#fee5b6",
-                    lightgreen: "#d6ebd9",
+                    lightgreen: "#4DA34F",
                 }
             },
         },
