@@ -10,10 +10,13 @@ interface CarouselProps {
     className?: string
     options?: any // any for embla options simply
     navigationClassName?: string
+    prevButtonClassName?: string
+    nextButtonClassName?: string
     slideClassName?: string
+    iconStrokeWidth?: number
 }
 
-export function GenericCarousel({ children, className, options, navigationClassName, slideClassName }: CarouselProps) {
+export function GenericCarousel({ children, className, options, navigationClassName, prevButtonClassName, nextButtonClassName, slideClassName, iconStrokeWidth = 2 }: CarouselProps) {
     const [emblaRef, emblaApi] = useEmblaCarousel(options)
     const [prevBtnDisabled, setPrevBtnDisabled] = React.useState(true)
     const [nextBtnDisabled, setNextBtnDisabled] = React.useState(true)
@@ -54,10 +57,11 @@ export function GenericCarousel({ children, className, options, navigationClassN
                 className={cn(
                     "absolute left-4 top-1/2 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-black/60 text-white transition-all disabled:opacity-0 opacity-0 group-hover:opacity-100",
                     !prevBtnDisabled && "hover:bg-black/90 cursor-pointer",
-                    navigationClassName
+                    navigationClassName,
+                    prevButtonClassName
                 )}
             >
-                <ChevronLeft className="h-5 w-5" />
+                <ChevronLeft className="h-5 w-5" strokeWidth={iconStrokeWidth} />
             </button>
 
             <button
@@ -66,10 +70,11 @@ export function GenericCarousel({ children, className, options, navigationClassN
                 className={cn(
                     "absolute right-4 top-1/2 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-black/60 text-white transition-all disabled:opacity-0 opacity-0 group-hover:opacity-100",
                     !nextBtnDisabled && "hover:bg-black/90 cursor-pointer",
-                    navigationClassName
+                    navigationClassName,
+                    nextButtonClassName
                 )}
             >
-                <ChevronRight className="h-5 w-5" />
+                <ChevronRight className="h-5 w-5" strokeWidth={iconStrokeWidth} />
             </button>
         </div>
     )

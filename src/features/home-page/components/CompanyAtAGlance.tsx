@@ -2,31 +2,31 @@ import * as React from "react"
 import { Text } from "@/components/ui/Text"
 import { GenericCarousel } from "@/components/ui/GenericCarousel"
 import { companyGlanceData } from "../data"
+import { cn } from "@/lib/utils"
 
 const IconMap: Record<string, React.ReactNode> = {
-    chemistry: <img src="/images/home-page/company-at-a-glance-1.png" alt="Chemistry" className="h-[95px] md:h-[110px] w-auto object-contain" />,
-    certificate: <img src="/images/home-page/company-at-a-glance-2.png" alt="Certificate" className="h-[95px] md:h-[110px] w-auto object-contain" />,
-    farm: <img src="/images/home-page/company-at-a-glance-3.png" alt="Farm" className="h-[95px] md:h-[110px] w-auto object-contain" />
+    chemistry: <img src="/images/home-page/company-at-a-glance-1.png" alt="Chemistry" className="h-[65px] md:h-[75px] w-auto object-contain" />,
+    certificate: <img src="/images/home-page/company-at-a-glance-2.png" alt="Certificate" className="h-[65px] md:h-[75px] w-auto object-contain" />,
+    farm: <img src="/images/home-page/company-at-a-glance-3.png" alt="Farm" className="h-[65px] md:h-[75px] w-auto object-contain" />
 }
 
 export function CompanyAtAGlance() {
     return (
         <section className="w-full">
             {/* Top White Section */}
-            <div className="pt-24 pb-16 bg-white text-center">
+            <div className="pt-12 pb-5 bg-white text-center">
                 <div className="section-container flex flex-col items-center">
-                    <Text as="h2" className="mb-10 text-[38px] sm:text-[44px] md:text-[50px] tracking-wide leading-tight relative uppercase">
-                        <span className="text-nirmal-green font-light pr-3">COMPANY</span>
-                        <span className="text-nirmal-darkgreen font-bold">AT A GLANCE</span>
+                    <Text as="h2" className="mb-4 text-[36px] sm:text-[46px] md:text-[52px] lg:text-[56px] tracking-tight leading-[1.1] relative uppercase text-nirmal-green">
+                        <span className="font-light pr-3">COMPANY</span>
+                        <span className="font-semibold">AT A GLANCE</span>
                     </Text>
 
-                    <div className="flex flex-col gap-5 text-[15px] sm:text-[18px] font-medium text-gray-700 leading-[1.6] max-w-5xl tracking-normal mx-auto px-6">
+                    <div className="flex flex-col gap-3 text-[14px] sm:text-[15px] lg:text-[16px] xl:text-[17px] font-medium text-gray-700 leading-[1.2] max-w-5xl tracking-normal mx-auto px-6 text-center">
                         {companyGlanceData.description.split('\n\n').map((paragraph, i) => (
                             <p key={i}>
                                 {paragraph.split('\n').map((line, j) => (
                                     <React.Fragment key={j}>
-                                        {line}
-                                        {j < paragraph.split('\n').length - 1 && <br className="hidden md:block" />}
+                                        {line}{j < paragraph.split('\n').length - 1 && <br className="hidden md:block" />}
                                     </React.Fragment>
                                 ))}
                             </p>
@@ -40,21 +40,27 @@ export function CompanyAtAGlance() {
                 <div className="section-container relative z-10">
                     <GenericCarousel
                         options={{ align: "start", loop: true, slidesToScroll: 1 }}
-                        navigationClassName="!bg-black !hover:bg-black/90 !rounded-none !w-8 !h-8 !md:w-9 !md:h-9 !border-none !text-nirmal-yellow shadow-xl disabled:hidden !opacity-100 absolute top-1/2 -translate-y-1/2 z-20"
-                        className="py-1 px-4 md:px-12"
-                        slideClassName="md:flex-[0_0_33.333%]"
+                        navigationClassName="!bg-black hover:bg-black/90 !rounded-none !w-9 !h-9 sm:!w-11 sm:!h-11 !border-none !text-nirmal-yellow !opacity-100 !visible z-20 flex items-center justify-center"
+                        prevButtonClassName="!left-0"
+                        nextButtonClassName="!right-0"
+                        className="py-2 px-10 sm:px-14 md:px-16 lg:px-20 mx-auto w-full max-w-[1100px]"
+                        slideClassName="md:flex-[0_0_33.333%] !pl-2"
+                        iconStrokeWidth={4}
                     >
                         {companyGlanceData.items.map((item, index) => (
                             <div key={index} className="flex h-full items-center justify-center relative">
-                                <div className="flex flex-row items-center justify-center text-left h-full select-none gap-4 md:gap-5 px-4">
+                                <div className={cn(
+                                    "flex flex-row items-center justify-start text-left h-full select-none gap-2 md:gap-3 lg:gap-4 pr-2 w-full",
+                                    index === 0 ? "pl-3 sm:pl-4" : "pl-0"
+                                )}>
                                     <div className="flex-shrink-0">
                                         {IconMap[item.icon] || IconMap['chemistry']}
                                     </div>
-                                    <div className="max-w-[260px]">
-                                        <Text className="font-extrabold text-[#000000] text-[16px] sm:text-[21px] leading-[1.1] tracking-tight">
+                                    <div className="flex-1 min-w-0">
+                                        <Text className="font-extrabold text-[#000000] text-[11px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-[1.3] tracking-tight block">
                                             {item.text.split('\n').map((line, i) => (
                                                 <React.Fragment key={i}>
-                                                    {line}{i < item.text.split('\n').length - 1 && <br />}
+                                                    <span className="whitespace-nowrap block">{line}</span>
                                                 </React.Fragment>
                                             ))}
                                         </Text>
@@ -62,7 +68,7 @@ export function CompanyAtAGlance() {
                                 </div>
                                 {/* Vertical Divider - visible on desktop between items */}
                                 {index < companyGlanceData.items.length - 1 && (
-                                    <div className="hidden md:block absolute -right-[15px] top-1/2 -translate-y-1/2 w-[2px] h-[75px] bg-black/80" />
+                                    <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[1.5px] h-[75px] lg:h-[85px] bg-black/90" />
                                 )}
                             </div>
                         ))}

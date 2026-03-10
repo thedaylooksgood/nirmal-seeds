@@ -81,21 +81,17 @@ export function Header({ navItems }: HeaderProps) {
                                 <Link
                                     href={item.href}
                                     className={cn(
-                                        "relative h-full flex items-center px-5 lg:px-7",
-                                        "text-[13px] lg:text-[15px] font-semibold tracking-wider uppercase transition-all duration-300",
+                                        "relative h-full flex items-center px-3 lg:px-4 whitespace-nowrap",
+                                        "text-[12px] lg:text-[13px] font-semibold tracking-wider uppercase transition-all duration-300",
                                         active
-                                            ? "text-nirmal-green"
-                                            : "text-gray-700 hover:text-nirmal-green",
+                                            ? "bg-nirmal-green text-white"
+                                            : "text-gray-700 hover:text-nirmal-green hover:bg-gray-50",
                                     )}
                                 >
                                     <span className="relative z-10 flex items-center gap-1">
                                         {item.label}
                                         {hasChildren && <ChevronDown size={14} className="transition-transform duration-300 group-hover:rotate-180" />}
                                     </span>
-
-                                    {active && (
-                                        <span className="absolute bottom-0 left-0 w-full h-[3px] bg-nirmal-green" />
-                                    )}
                                 </Link>
 
                                 {/* DESKTOP DROPDOWN */}

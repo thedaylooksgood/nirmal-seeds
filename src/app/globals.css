@@ -5,7 +5,7 @@
   --foreground: #171717;
 
   /* ── Layout Tokens (Industry Standard — Google / YouTube / GitHub) ── */
-  --site-max-width: 1280px;
+  --site-max-width: 1100px;
   --site-padding-x: 1rem;
   /* 16px — mobile   */
   --site-padding-x-md: 1.5rem;
@@ -23,17 +23,17 @@
   --font-weight-extralight: 400;
   --font-weight-light: 400;
   --font-weight-normal: 400;
-  --font-weight-medium: 600;
+  --font-weight-medium: 500;
   --font-weight-semibold: 600;
-  --font-weight-bold: 600;
-  --font-weight-extrabold: 600;
-  --font-weight-black: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
   /* Custom Colors for v4 inline */
-  --color-nirmal-green: #2e8b2b;
-  --color-nirmal-darkgreen: #0a6931;
-  --color-nirmal-yellow: #fbbb21;
-  --color-nirmal-lightyellow: #fde8bc;
-  --color-nirmal-lightgreen: #cce0cd;
+  --color-nirmal-green: #3c8e00;
+  --color-nirmal-darkgreen: #1E4D2B;
+  --color-nirmal-yellow: #fbb016;
+  --color-nirmal-lightyellow: #fee5b6;
+  --color-nirmal-lightgreen: #4DA34F;
 }
 
 body {
@@ -50,7 +50,7 @@ body {
  *   Mobile  (<768px)  → 16px padding
  *   Tablet  (≥768px)  → 24px padding
  *   Desktop (≥1024px) → 32px padding
- *   Content max-width → 1280px
+ *   Content max-width → 1100px
  */
 .section-container {
   width: 100%;
