@@ -12,7 +12,7 @@ export default function BiotechInputPage() {
                 breadcrumb={[
                     { label: "HOME", href: "/" },
                     { label: "DEPARTMENTS", href: "/department" },
-                    { label: "BIOTECH & INPUT", href: "/department/biotech-input" }
+                    { label: "BIOTECH & INPUT", href: "" }
                 ]}
                 backgroundImage="/images/home-page/hero-banner.png"
             />

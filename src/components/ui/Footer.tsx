@@ -34,9 +34,9 @@ export function Footer({ sections, copyrightText, bottomLinks }: FooterProps) {
     }
 
     return (
-        <footer className="bg-[#028e4f] text-white pt-12">
-            <div className="section-container pb-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+        <footer className="bg-[#028e4f] text-white pt-8 sm:pt-12">
+            <div className="section-container pb-10 sm:pb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-8 sm:gap-y-12">
                     {sections.map((section, index) => (
                         <div key={index} className={index > 0 ? "lg:flex lg:flex-col lg:items-center" : ""}>
                             <div className="w-full lg:w-fit">

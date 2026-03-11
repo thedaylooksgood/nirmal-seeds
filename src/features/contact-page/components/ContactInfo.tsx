@@ -38,7 +38,7 @@ export function ContactInfo() {
                     <h3 className="text-[13px] sm:text-[14px] font-bold text-gray-900 mb-0.5">
                         {contactInfoData.office.title}
                     </h3>
-                    <p className="text-[11.5px] sm:text-[12.5px] text-gray-600 leading-relaxed whitespace-pre-line">
+                    <p className="text-[11.5px] sm:text-[12.5px] leading-relaxed whitespace-pre-line font-medium text-[#111]">
                         {contactInfoData.office.address}
                     </p>
                 </div>
@@ -67,7 +67,7 @@ export function ContactInfo() {
                     </h3>
                     <a
                         href={contactInfoData.phone.href}
-                        className="text-[11.5px] sm:text-[12.5px] text-gray-600 hover:text-nirmal-green transition-colors"
+                        className="text-[11.5px] sm:text-[12.5px] text-[#111] hover:text-nirmal-green transition-colors"
                     >
                         {contactInfoData.phone.label}
                     </a>
@@ -97,7 +97,7 @@ export function ContactInfo() {
                     </h3>
                     <a
                         href={contactInfoData.email.href}
-                        className="text-[11.5px] sm:text-[12.5px] text-gray-600 hover:text-nirmal-green transition-colors"
+                        className="text-[11.5px] sm:text-[12.5px] text-[#111] hover:text-nirmal-green transition-colors"
                     >
                         {contactInfoData.email.label}
                     </a>

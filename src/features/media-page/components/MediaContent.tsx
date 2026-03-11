@@ -45,7 +45,7 @@ export function MediaContent() {
                                                 {award.title}
                                             </h3>
                                             {award.description && (
-                                                <p className="text-[13px] sm:text-[14px] text-[#444] leading-[1.7]">
+                                                <p className="text-[13px] sm:text-[14px] leading-[1.7] font-medium text-[#111]">
                                                     {award.description}
                                                 </p>
                                             )}
@@ -74,7 +74,7 @@ export function MediaContent() {
                                                 {award.title}
                                             </h3>
                                             {award.description && (
-                                                <p className="text-[13px] sm:text-[14px] text-[#444] leading-[1.7]">
+                                                <p className="text-[13px] sm:text-[14px] leading-[1.7] font-medium text-[#111]">
                                                     {award.description}
                                                 </p>
                                             )}

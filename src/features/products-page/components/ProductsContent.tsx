@@ -12,14 +12,14 @@ export function ProductsContent() {
                         as="h1"
                         className="text-[30px] sm:text-[38px] md:text-[46px] lg:text-[54px] tracking-wide leading-tight"
                     >
-                        <span className="font-light text-[#333]">OUR </span>
+                        <span className="font-light text-[#111]">OUR </span>
                         <span className="font-extrabold text-nirmal-green">PRODUCTS</span>
                     </Text>
                 </div>
 
                 {/* Intro */}
                 <p
-                    className="text-[13px] sm:text-[14px] md:text-[15px] text-[#444] leading-[1.85] mb-10 md:mb-14 text-justify"
+                    className="text-[13px] sm:text-[14px] md:text-[15px] leading-[1.85] mb-10 md:mb-14 text-justify font-medium text-[#111]"
                     dangerouslySetInnerHTML={{
                         __html: productsContentData.introParagraph,
                     }}
@@ -50,11 +50,11 @@ export function ProductsContent() {
                                     {category.title}
                                 </Text>
                                 {category.subtitle && (
-                                    <p className="text-[13px] text-nirmal-green font-medium mb-4">
+                                    <p className="text-[13px] text-nirmal-green mb-4 font-medium text-[#111]">
                                         {category.subtitle}
                                     </p>
                                 )}
-                                <p className="text-[13px] sm:text-[14px] md:text-[15px] text-[#444] leading-[1.85] text-justify mb-5">
+                                <p className="text-[13px] sm:text-[14px] md:text-[15px] leading-[1.85] text-justify mb-5 font-medium text-[#111]">
                                     {category.description}
                                 </p>
 
@@ -64,7 +64,7 @@ export function ProductsContent() {
                                         {category.crops.map((crop, cropIndex) => (
                                             <span
                                                 key={cropIndex}
-                                                className="px-3 py-1.5 bg-nirmal-lightgreen text-nirmal-darkgreen text-[11px] sm:text-[12px] font-semibold rounded-md"
+                                                className="px-3 py-1.5 bg-nirmal-lightgreen text-nirmal-darkgreen text-[11px] sm:text-[12px] font-medium rounded-md"
                                             >
                                                 {crop}
                                             </span>

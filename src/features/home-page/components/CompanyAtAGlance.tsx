@@ -16,12 +16,12 @@ export function CompanyAtAGlance() {
             {/* Top White Section */}
             <div className="pt-12 pb-5 bg-white text-center">
                 <div className="section-container flex flex-col items-center">
-                    <Text as="h2" className="mb-4 text-[36px] sm:text-[46px] md:text-[52px] lg:text-[56px] tracking-tight leading-[1.1] relative uppercase text-nirmal-green">
-                        <span className="font-light pr-3">COMPANY</span>
+                    <Text as="h2" className="mb-4 text-[28px] sm:text-[36px] md:text-[46px] lg:text-[52px] xl:text-[56px] tracking-tight leading-[1.1] relative uppercase text-nirmal-green">
+                        <span className="font-light pr-2 sm:pr-3">COMPANY</span>
                         <span className="font-semibold">AT A GLANCE</span>
                     </Text>
 
-                    <div className="flex flex-col gap-3 text-[14px] sm:text-[15px] lg:text-[16px] xl:text-[17px] font-medium text-gray-700 leading-[1.2] max-w-5xl tracking-normal mx-auto px-6 text-center">
+                    <div className="flex flex-col gap-3 text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[17px] font-medium text-[#111] leading-[1.3] sm:leading-[1.2] max-w-5xl tracking-normal mx-auto px-4 sm:px-6 text-center">
                         {companyGlanceData.description.split('\n\n').map((paragraph, i) => (
                             <p key={i}>
                                 {paragraph.split('\n').map((line, j) => (
@@ -50,8 +50,7 @@ export function CompanyAtAGlance() {
                         {companyGlanceData.items.map((item, index) => (
                             <div key={index} className="flex h-full items-center justify-center relative">
                                 <div className={cn(
-                                    "flex flex-row items-center justify-start text-left h-full select-none gap-2 md:gap-3 lg:gap-4 pr-2 w-full",
-                                    index === 0 ? "pl-3 sm:pl-4" : "pl-0"
+                                    "flex flex-row items-center text-left h-full select-none gap-3 lg:gap-4 px-2 w-fit md:w-full mx-auto md:mx-0"
                                 )}>
                                     <div className="flex-shrink-0">
                                         {IconMap[item.icon] || IconMap['chemistry']}

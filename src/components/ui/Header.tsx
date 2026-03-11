@@ -47,7 +47,7 @@ export function Header({ navItems }: HeaderProps) {
 
     return (
         <header className="sticky top-0 z-50 w-full bg-white shadow-sm border-b border-gray-100">
-            <div className="section-container flex h-[74px] lg:h-[84px] items-center justify-between">
+            <div className="w-full max-w-[1110px] mx-auto px-4 sm:px-6 lg:px-8 flex h-[74px] lg:h-[84px] items-center justify-between">
 
                 {/* LOGO */}
                 <Link
@@ -79,13 +79,18 @@ export function Header({ navItems }: HeaderProps) {
                         return (
                             <div key={index} className="relative h-full group">
                                 <Link
-                                    href={item.href}
+                                    href={hasChildren ? "#" : item.href}
+                                    onClick={(e) => {
+                                        if (hasChildren) {
+                                            e.preventDefault();
+                                        }
+                                    }}
                                     className={cn(
                                         "relative h-full flex items-center px-3 lg:px-4 whitespace-nowrap",
                                         "text-[12px] lg:text-[13px] font-semibold tracking-wider uppercase transition-all duration-300",
                                         active
-                                            ? "bg-nirmal-green text-white"
-                                            : "text-gray-700 hover:text-nirmal-green hover:bg-gray-50",
+                                            ? "bg-[#3c8e00] text-white"
+                                            : "text-gray-700 hover:text-[#3c8e00] hover:bg-gray-50",
                                     )}
                                 >
                                     <span className="relative z-10 flex items-center gap-1">
@@ -101,7 +106,7 @@ export function Header({ navItems }: HeaderProps) {
                                             <Link
                                                 key={idx}
                                                 href={child.href}
-                                                className="block px-7 py-3 text-[13px] lg:text-[15px] text-gray-700 hover:bg-nirmal-green hover:text-white transition-colors duration-200 font-semibold"
+                                                className="block px-7 py-3 text-[13px] lg:text-[15px] text-gray-700 hover:bg-[#3c8e00] hover:text-white transition-colors duration-200 font-semibold"
                                             >
                                                 {child.label}
                                             </Link>
@@ -115,7 +120,7 @@ export function Header({ navItems }: HeaderProps) {
 
                 {/* MOBILE MENU TOGGLE */}
                 <button
-                    className="md:hidden p-2 text-gray-700 hover:text-nirmal-green transition-colors focus:outline-none z-50"
+                    className="md:hidden p-2 text-gray-700 hover:text-[#3c8e00] transition-colors focus:outline-none z-50"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     aria-label="Toggle Menu"
                 >
@@ -147,7 +152,7 @@ export function Header({ navItems }: HeaderProps) {
                                         className={cn(
                                             "p-5 rounded-xl text-[18px] font-semibold tracking-wide transition-all duration-300 flex items-center justify-between",
                                             active || isOpen
-                                                ? "bg-nirmal-green text-white shadow-md shadow-green-100"
+                                                ? "bg-[#3c8e00] text-white shadow-md shadow-green-100"
                                                 : "bg-white text-gray-800 border border-gray-100"
                                         )}
                                     >
@@ -161,7 +166,7 @@ export function Header({ navItems }: HeaderProps) {
                                         className={cn(
                                             "p-5 rounded-xl text-[18px] font-semibold tracking-wide transition-all duration-300 flex items-center justify-between",
                                             active
-                                                ? "bg-nirmal-green text-white shadow-md shadow-green-100"
+                                                ? "bg-[#3c8e00] text-white shadow-md shadow-green-100"
                                                 : "bg-white text-gray-800 border border-gray-100"
                                         )}
                                     >
@@ -180,7 +185,7 @@ export function Header({ navItems }: HeaderProps) {
                                                 key={idx}
                                                 href={child.href}
                                                 onClick={() => setIsMenuOpen(false)}
-                                                className="p-4 rounded-lg text-[16px] font-semibold text-gray-700 bg-white border border-gray-50 hover:text-nirmal-green shadow-sm"
+                                                className="p-4 rounded-lg text-[16px] font-semibold text-gray-700 bg-white border border-gray-50 hover:text-[#3c8e00] shadow-sm"
                                             >
                                                 {child.label}
                                             </Link>

@@ -103,7 +103,7 @@ export const awardsData = {
 
 
 export const testimonialData = {
-    title: "FARMER TESTIMONIAL",
+    title: "FARMER  TESTIMONIAL",
     quotes: [
         {
             text: "I have been farming for the past 20 years and have always relied on Nirmal Seeds for my crops. The yield is consistently high and the seed quality is excellent. I highly recommend them to all farmers.",
@@ -137,7 +137,7 @@ export const navItems: NavItem[] = [
     { label: "Home", href: "/" },
     {
         label: "Overview",
-        href: "/about",
+        href: "#",
         children: [
             { label: "About Us", href: "/about" },
             { label: "Management", href: "/management" },
@@ -146,21 +146,21 @@ export const navItems: NavItem[] = [
     },
     {
         label: "Products",
-        href: "/products",
+        href: "#",
         children: [
             { label: "Field Crops", href: "/products/field-crops" },
-            { label: "Vegetable Seeds", href: "/products/vegetable-seeds" },
-            { label: "Bio Products", href: "/products/bio-products" },
+            { label: "Vegetable Seeds", href: "" },
+            { label: "Bio Products", href: "" },
         ]
     },
     {
         label: "Departments",
-        href: "/department",
+        href: "#",
         children: [
             { label: "Research & Development", href: "/department/r-d" },
             { label: "Quality Assurance", href: "/department/quality-assurance" },
             { label: "Production & Processing", href: "/department/production-processing" },
-            { label: "Bio Tech & Input division", href: "/department/biotech-input" },
+            { label: "Bio Tech & Input division", href: "" },
         ]
     },
     { label: "CSR @ Nirmal", href: "/csr" },
@@ -181,15 +181,15 @@ export const footerData = {
                 { label: "Research & development", href: "/department/r-d" },
                 { label: "Quality Assurance", href: "/department/quality-assurance" },
                 { label: "Production & processing", href: "/department/production-processing" },
-                { label: "Bio Tech & Input division", href: "/department/biotech-input" }
+                { label: "Bio Tech & Input division", href: "" }
             ]
         },
         {
             title: "Products",
             links: [
                 { label: "Field Crops", href: "/products/field-crops" },
-                { label: "Vegetable Seeds", href: "/products/vegetable-seeds" },
-                { label: "Bio Products", href: "/products/bio-products" }
+                { label: "Vegetable Seeds", href: "" },
+                { label: "Bio Products", href: "" }
             ]
         },
         {

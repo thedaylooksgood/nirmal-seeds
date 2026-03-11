@@ -47,7 +47,7 @@ export function ManagementSection() {
                                 </div>
 
                                 {/* Description */}
-                                <p className="text-[12px] sm:text-[13px] text-[#444] leading-[1.7] text-justify font-medium">
+                                <p className="text-[12px] sm:text-[13px] leading-[1.7] text-justify font-medium text-[#111]">
                                     {director.description}
                                 </p>
                             </div>

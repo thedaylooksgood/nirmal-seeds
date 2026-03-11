@@ -10,11 +10,11 @@ export function OfficeInfoCard() {
                 {officeInfo.title}
             </h4>
 
-            <p className="text-[11.5px] sm:text-[12px] text-gray-600 leading-relaxed whitespace-pre-line mb-3">
+            <p className="text-[11.5px] sm:text-[12px] leading-relaxed whitespace-pre-line mb-3 font-medium text-[#111]">
                 {officeInfo.address}
             </p>
 
-            <p className="text-[11.5px] sm:text-[12px] text-gray-600 mb-1">
+            <p className="text-[11.5px] sm:text-[12px] mb-1 font-medium text-[#111]">
                 <a
                     href={officeInfo.phoneHref}
                     className="hover:text-nirmal-green transition-colors"
@@ -23,7 +23,7 @@ export function OfficeInfoCard() {
                 </a>
             </p>
 
-            <p className="text-[11.5px] sm:text-[12px] text-gray-600 mb-4">
+            <p className="text-[11.5px] sm:text-[12px] mb-4 font-medium text-[#111]">
                 <a
                     href={officeInfo.emailHref}
                     className="hover:text-nirmal-green transition-colors"

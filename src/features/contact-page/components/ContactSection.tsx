@@ -11,7 +11,7 @@ export function ContactSection() {
                 <div className="text-center mb-10 md:mb-12">
                     <Text
                         as="h1"
-                        className="text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-bold tracking-wide leading-tight !text-[#333]"
+                        className="text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-bold tracking-wide leading-tight !text-[#111]"
                     >
                         GET{" "}
                         <span className="italic font-bold text-nirmal-darkgreen">

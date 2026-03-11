@@ -34,7 +34,7 @@ export function LegacySection() {
                             <h2 className="text-[18px] sm:text-[20px] md:text-[22px] font-bold text-[#111] mb-1">
                                 {legacyData.name}
                             </h2>
-                            <p className="text-[14px] sm:text-[15px] md:text-[16px] text-[#333] mb-4">
+                            <p className="text-[14px] sm:text-[15px] md:text-[16px] mb-4 font-medium text-[#111]">
                                 {legacyData.designation}
                             </p>
                         </div>
@@ -42,7 +42,7 @@ export function LegacySection() {
                         {/* Top Paragraphs */}
                         <div className="space-y-4 mb-6">
                             {legacyData.paragraphs1.map((p, i) => (
-                                <p key={i} className="text-[12px] sm:text-[13px] text-[#444] leading-[1.7] text-justify font-medium">
+                                <p key={i} className="text-[12px] sm:text-[13px] leading-[1.7] text-justify font-medium text-[#111]">
                                     {p}
                                 </p>
                             ))}
@@ -61,7 +61,7 @@ export function LegacySection() {
                         {/* Bottom Paragraphs */}
                         <div className="space-y-4">
                             {legacyData.paragraphs2.map((p, i) => (
-                                <p key={i} className="text-[12px] sm:text-[13px] text-[#444] leading-[1.7] text-justify font-medium">
+                                <p key={i} className="text-[12px] sm:text-[13px] leading-[1.7] text-justify font-medium text-[#111]">
                                     {p}
                                 </p>
                             ))}

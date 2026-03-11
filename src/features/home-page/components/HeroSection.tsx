@@ -28,7 +28,7 @@ export function HeroSection() {
 
     return (
         <section
-            className="relative w-full h-[500px] sm:h-[600px] md:h-[650px] lg:h-[700px] max-h-[700px] flex items-start pt-8 md:pt-12 lg:pt-16 bg-gray-900 overflow-hidden"
+            className="relative w-full h-[350px] sm:h-[450px] md:h-[600px] lg:h-[700px] max-h-[700px] flex items-start pt-6 sm:pt-8 md:pt-12 lg:pt-16 bg-gray-900 overflow-hidden"
         >
             {/* Background Images with Crossfade */}
             {images.map((img, index) => (
@@ -45,10 +45,10 @@ export function HeroSection() {
             {/* Align content with the logo in the header (container px-4 lg:px-8) */}
             <div className="section-container relative z-20">
                 <div className="max-w-[800px]">
-                    <Text as="h1" className="text-[36px] sm:text-[46px] md:text-[56px] lg:text-[64px] leading-[1.1] tracking-normal text-nirmal-darkgreen font-light">
+                    <Text as="h1" className="text-[26px] sm:text-[36px] md:text-[56px] lg:text-[64px] leading-[1.1] tracking-normal text-[#3c8e00] font-light">
                         INNOVATION THAT<br />EMPOWERS THE FUTURE.
                     </Text>
-                    <Text as="h1" className="text-[36px] sm:text-[46px] md:text-[56px] lg:text-[64px] leading-[1.1] tracking-normal text-black font-semibold mt-2">
+                    <Text as="h1" className="text-[26px] sm:text-[36px] md:text-[56px] lg:text-[64px] leading-[1.1] tracking-normal text-black font-medium mt-1 sm:mt-2">
                         SOLUTIONS THAT<br />ENRICH LIVES.
                     </Text>
                 </div>
@@ -56,18 +56,18 @@ export function HeroSection() {
 
             {/* Carousel Navigation Circles */}
             {images.length > 1 && (
-                <div className="absolute bottom-[20%] w-full px-12 lg:px-40 flex justify-between pointer-events-none z-30">
+                <div className="absolute bottom-[15%] sm:bottom-[20%] w-full px-4 sm:px-12 lg:px-40 flex justify-between pointer-events-none z-30">
                     <div
                         onClick={handlePrev}
-                        className="w-[38px] h-[38px] sm:w-[46px] sm:h-[46px] rounded-full border-[1.5px] border-white/60 flex items-center justify-center pointer-events-auto cursor-pointer hover:bg-white/20 hover:border-white transition-all bg-transparent"
+                        className="w-[34px] h-[34px] sm:w-[38px] sm:h-[38px] md:w-[46px] md:h-[46px] rounded-full border-[1.5px] border-white/60 flex items-center justify-center pointer-events-auto cursor-pointer hover:bg-white/20 hover:border-white transition-all bg-black/30 sm:bg-transparent"
                     >
-                        <span className="text-white/80 font-light text-[26px] mt-[-4px] ml-[-2px]">&larr;</span>
+                        <span className="text-white/80 font-light text-[20px] sm:text-[26px] mt-[-4px] ml-[-2px]">&larr;</span>
                     </div>
                     <div
                         onClick={handleNext}
-                        className="w-[38px] h-[38px] sm:w-[46px] sm:h-[46px] rounded-full border-[1.5px] border-white/60 flex items-center justify-center pointer-events-auto cursor-pointer hover:bg-white/20 hover:border-white transition-all bg-transparent"
+                        className="w-[34px] h-[34px] sm:w-[38px] sm:h-[38px] md:w-[46px] md:h-[46px] rounded-full border-[1.5px] border-white/60 flex items-center justify-center pointer-events-auto cursor-pointer hover:bg-white/20 hover:border-white transition-all bg-black/30 sm:bg-transparent"
                     >
-                        <span className="text-white/80 font-light text-[26px] mt-[-4px] ml-[2px]">&rarr;</span>
+                        <span className="text-white/80 font-light text-[20px] sm:text-[26px] mt-[-4px] ml-[2px]">&rarr;</span>
                     </div>
                 </div>
             )}
