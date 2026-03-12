@@ -9,13 +9,13 @@ export function EnvironmentSection() {
                 <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
                     {/* Left column — title + text */}
                     <div className="w-full lg:w-[50%] space-y-3">
-                        <h2 className="text-[16px] sm:text-[18px] md:text-[20px] font-bold text-[#333] mb-1">
+                        <h2 className="text-[16px] sm:text-[18px] md:text-[20px] font-bold text-[#111] mb-1">
                             {environmentData.subtitle}
                         </h2>
                         {environmentData.paragraphs.map((p, i) => (
                             <p
                                 key={i}
-                                className="text-[13px] sm:text-[14px] text-[#444] leading-[1.8] text-justify"
+                                className="text-[13px] sm:text-[14px] leading-[1.8] text-justify font-medium text-[#111]"
                             >
                                 {p}
                             </p>

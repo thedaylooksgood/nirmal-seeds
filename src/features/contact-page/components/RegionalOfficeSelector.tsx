@@ -19,7 +19,7 @@ export function RegionalOfficeSelector() {
 
     const selectClasses = cn(
         "w-full appearance-none rounded-sm border border-gray-300 bg-white px-4 py-2.5",
-        "text-[12.5px] sm:text-[13px] text-gray-700 placeholder:text-gray-400",
+        "text-[12.5px] sm:text-[13px] text-[#111] placeholder:text-gray-400",
         "outline-none focus:ring-2 focus:ring-nirmal-green/40 focus:border-nirmal-green/50 transition-all duration-200",
         "cursor-pointer"
     )
@@ -46,7 +46,7 @@ export function RegionalOfficeSelector() {
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
                     <svg
-                        className="w-4 h-4 text-gray-500"
+                        className="w-4 h-4 text-[#111]"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth={2}
@@ -78,7 +78,7 @@ export function RegionalOfficeSelector() {
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
                     <svg
-                        className="w-4 h-4 text-gray-500"
+                        className="w-4 h-4 text-[#111]"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth={2}

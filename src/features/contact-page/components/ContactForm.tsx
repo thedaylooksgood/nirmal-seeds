@@ -20,17 +20,17 @@ export function ContactForm() {
 
     return (
         <div>
-            <h3 className="text-[14px] sm:text-[15px] font-bold text-gray-900 mb-5">
+            <h3 className="text-[16px] xl:text-[18px] font-bold text-[#111] mb-4 leading-none">
                 Fill the form
             </h3>
 
             {submitted && (
-                <div className="mb-4 rounded-md bg-nirmal-green/10 border border-nirmal-green/30 px-4 py-2.5 text-[12.5px] text-nirmal-darkgreen font-medium">
+                <div className="mb-4 rounded-none bg-nirmal-green/10 border border-nirmal-green/30 px-4 py-2 text-[13px] text-nirmal-darkgreen font-medium">
                     Thank you! Your message has been sent successfully.
                 </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-3.5">
+            <form onSubmit={handleSubmit} className="space-y-3">
                 {contactFormFields.map((field) =>
                     field.type === "textarea" ? (
                         <textarea
@@ -40,8 +40,8 @@ export function ContactForm() {
                             required
                             rows={3}
                             className={cn(
-                                "w-full rounded-sm border-0 bg-gray-100 px-4 py-2.5 text-[12.5px] sm:text-[13px] text-gray-800 placeholder:text-gray-400",
-                                "outline-none ring-0 focus:ring-2 focus:ring-nirmal-green/40 focus:bg-white transition-all duration-200",
+                                "w-full rounded-none border-0 bg-[#f0f0f0] px-4 py-3 text-[14px] text-[#444] placeholder:text-gray-500",
+                                "outline-none ring-0 focus:ring-1 focus:ring-gray-300 transition-all duration-200",
                                 "resize-none"
                             )}
                         />
@@ -53,8 +53,8 @@ export function ContactForm() {
                             placeholder={field.placeholder}
                             required
                             className={cn(
-                                "w-full rounded-sm border-0 bg-gray-100 px-4 py-2.5 text-[12.5px] sm:text-[13px] text-gray-800 placeholder:text-gray-400",
-                                "outline-none ring-0 focus:ring-2 focus:ring-nirmal-green/40 focus:bg-white transition-all duration-200"
+                                "w-full rounded-none border-0 bg-[#f0f0f0] px-4 py-3 text-[14px] text-[#444] placeholder:text-gray-500",
+                                "outline-none ring-0 focus:ring-1 focus:ring-gray-300 transition-all duration-200"
                             )}
                         />
                     )
@@ -64,8 +64,8 @@ export function ContactForm() {
                     type="submit"
                     disabled={isSubmitting}
                     className={cn(
-                        "px-7 py-2.5 rounded-sm bg-nirmal-green text-white text-[12px] sm:text-[13px] font-bold uppercase tracking-wider",
-                        "hover:bg-nirmal-darkgreen active:scale-[0.98] transition-all duration-200",
+                        "px-8 py-2.5 rounded-none bg-[#999999] text-white text-[14px] font-bold tracking-wide",
+                        "hover:bg-[#888888] active:scale-[0.98] transition-all duration-200",
                         "disabled:opacity-60 disabled:cursor-not-allowed"
                     )}
                 >

@@ -34,19 +34,19 @@ export function FieldCropsContent() {
                     <div className="text-center mb-5 md:mb-6">
                         <Text
                             as="h1"
-                            className="text-[28px] sm:text-[34px] md:text-[40px] tracking-wide leading-tight inline-block border-b-[3px] border-nirmal-darkgreen pb-1"
+                            className="text-[28px] sm:text-[36px] md:text-[46px] lg:text-[52px] xl:text-[56px] tracking-tight leading-[1.1] mb-4 uppercase text-nirmal-green"
                         >
-                            <span className="font-light text-nirmal-green">
-                                {fieldCropsContentData.title}{" "}
+                            <span className="font-light pr-2 sm:pr-3">
+                                {fieldCropsContentData.title}
                             </span>
-                            <span className="font-extrabold text-nirmal-green">
+                            <span className="font-medium">
                                 {fieldCropsContentData.titleHighlight}
                             </span>
                         </Text>
                     </div>
 
                     {/* Description */}
-                    <p className="text-[12px] sm:text-[13px] text-[#444] leading-[1.8] text-justify">
+                    <p className="text-[14px] sm:text-[16px] leading-[1.4] text-justify font-medium text-[#111]">
                         {fieldCropsContentData.description}
                     </p>
                 </div>
@@ -57,7 +57,7 @@ export function FieldCropsContent() {
                 className="w-full py-10 sm:py-14 md:py-16 pb-20 sm:pb-28"
                 style={{
                     background:
-                        "linear-gradient(to bottom, #F5D57A 0%, #FFF0B7 35%, #ffffff 100%)",
+                        "linear-gradient(to bottom, #fee0a0 0%, #fee0a0 20%, #fef0c9 50%, #ffffff 100%)",
                 }}
             >
                 <div className="section-container">

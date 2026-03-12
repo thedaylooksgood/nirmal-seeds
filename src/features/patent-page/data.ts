@@ -6,7 +6,7 @@ export const patentHeroData = {
         { label: "Patent", href: "/patent" },
     ],
     backgroundImage:
-        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop",
+        "/images/overview-about-us/hero.png",
 }
 
 export const patentContentData = {

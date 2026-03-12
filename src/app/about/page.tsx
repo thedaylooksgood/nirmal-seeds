@@ -1,6 +1,7 @@
-import { AboutHeroBanner } from "@/features/about-page/components/AboutHeroBanner"
+import { InnerPageHeroBanner } from "@/components/ui/InnerPageHeroBanner"
 import { AboutContent } from "@/features/about-page/components/AboutContent"
 import { VisionMission } from "@/features/about-page/components/VisionMission"
+import { aboutHeroData } from "@/features/about-page/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -12,7 +13,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <main className="flex min-h-screen flex-col items-center w-full">
-            <AboutHeroBanner />
+            <InnerPageHeroBanner
+                breadcrumb={aboutHeroData.breadcrumb}
+                backgroundImage={aboutHeroData.backgroundImage}
+            />
             <AboutContent />
             <VisionMission />
         </main>

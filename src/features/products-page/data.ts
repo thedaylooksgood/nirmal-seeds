@@ -6,7 +6,7 @@ export const productsHeroData = {
         { label: "Products", href: "/products" },
     ],
     backgroundImage:
-        "https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=2070&auto=format&fit=crop",
+        "/images/overview-about-us/hero.png",
 }
 
 export const productsContentData = {
@@ -20,7 +20,7 @@ export const productsContentData = {
             subtitle: "(Hybrid & Improved Varieties)",
             description:
                 "Nirmal Seeds develops and markets innovative hybrids and varieties across major crops including Cotton, Maize, Bajra, Jowar, Wheat, Paddy, Soybean, Groundnut, and more. Our field crops are bred for superior yield potential, pest tolerance, and adaptability to local conditions.",
-            image: "https://images.unsplash.com/photo-1596728514809-b68a8ababc24?q=80&w=2070&auto=format&fit=crop",
+            image: "/images/home-page/product-categories-field-crops.png",
             crops: ["Cotton", "Maize", "Bajra", "Jowar", "Wheat", "Paddy", "Soybean", "Groundnut", "Bengal Gram"],
         },
         {
@@ -28,21 +28,21 @@ export const productsContentData = {
             subtitle: "(Hybrid & Improved Varieties)",
             description:
                 "A rapidly growing segment supported by our advanced breeding program. We offer high-quality vegetable seeds including Tomato, Chilli, Okra, Brinjal, Watermelon, Bottle Gourd, and many more, targeting both domestic and global markets.",
-            image: "https://images.unsplash.com/photo-1592924357228-91a5aadc08d4?q=80&w=2670&auto=format&fit=crop",
+            image: "/images/home-page/product-categories-vegetable-seeds.png",
             crops: ["Tomato", "Chilli", "Okra", "Brinjal", "Watermelon", "Bottle Gourd", "Onion", "Cabbage"],
         },
         {
             title: "Biofortified / Nutritionally Enriched Crops",
             description:
                 "Nirmal Seeds is deeply invested in the biofortified ecosystem, partnering with ICAR and international bodies. Our biofortified seeds deliver higher nutritional value — more iron, zinc, and vitamins — helping combat malnutrition while maintaining excellent yields.",
-            image: "https://images.unsplash.com/photo-1500937386664-56d1dfefcb19?q=80&w=2070&auto=format&fit=crop",
+            image: "/images/home-page/product-categories-biofortified-crops.png",
             crops: ["Iron-rich Bajra", "Zinc-rich Wheat", "Protein-rich Maize"],
         },
         {
             title: "Bio-Organic Inputs",
             description:
                 "Beyond seeds, Nirmal offers 22+ bio-organic products including bio-fertilizers, bio-pesticides, and soil conditioners. We also operate one of India's largest Mycorrhiza production facilities using advanced Root Organ Culture (ROC) technology.",
-            image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=2070&auto=format&fit=crop",
+            image: "/products/products-mixfieldcrops/image 149.png",
             crops: ["Bio-fertilizers", "Bio-pesticides", "Mycorrhiza", "Soil Conditioners"],
         },
     ],

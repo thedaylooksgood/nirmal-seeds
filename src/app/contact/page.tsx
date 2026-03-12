@@ -1,4 +1,5 @@
-import { ContactHeroBanner } from "@/features/contact-page/components/ContactHeroBanner"
+import { InnerPageHeroBanner } from "@/components/ui/InnerPageHeroBanner"
+import { contactHeroData } from "@/features/contact-page/data"
 import { ContactSection } from "@/features/contact-page/components/ContactSection"
 import type { Metadata } from "next"
 
@@ -11,7 +12,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <main className="flex min-h-screen flex-col items-center w-full">
-            <ContactHeroBanner />
+            <InnerPageHeroBanner 
+                breadcrumb={contactHeroData.breadcrumb}
+                backgroundImage={contactHeroData.backgroundImage}
+            />
             <ContactSection />
         </main>
     )

@@ -16,7 +16,7 @@ export const companyGlanceData = {
     description: "Founded in 1988, Nirmal Seeds is a research-driven seed and agri-biotech company that shapes Indian agriculture through\nscience, innovation, and farmer-centric solutions.\n\nNirmal Seeds continues to build on a strong legacy—combining science, quality and nationwide reach to support India's\nfarmers and strengthen the country's agricultural future.",
     items: [
         {
-            icon: "chemistry", // We'll map this to a Lucide icon
+            icon: "chemistry",
             text: "35+ years of\nseed research\n& innovation"
         },
         {
@@ -26,6 +26,30 @@ export const companyGlanceData = {
         {
             icon: "farm",
             text: "80+ hectares research\nfarm + multi-location\ntrials across India"
+        },
+        {
+            icon: "certificate",
+            text: "2 NABL-accreditation\none for seed testing lab\nand molecular testing lab"
+        },
+        {
+            icon: "chemistry",
+            text: "177+ research seed\nproducts across\n35 crops"
+        },
+        {
+            icon: "farm",
+            text: "Growing presence\nacross\n23 states"
+        },
+        {
+            icon: "chemistry",
+            text: "6,000+ distributors &\n28,000+ retail\ntouchpoints"
+        },
+        {
+            icon: "chemistry",
+            text: "Ultra-modern bio-input\nfacilities in MH,\nGujarat & Assam"
+        },
+        {
+            icon: "certificate",
+            text: "2 patented bio-stimulant\ntechnologies for\nsustainable agriculture"
         }
     ]
 }
@@ -35,21 +59,21 @@ export const productCategoriesData = {
     categories: [
         {
             title: "Field Crops",
-            subtitle: "(Hybrid & Improved Varieties)",
-            description: "Nirmal Seeds develops and markets innovative hybrids and varieties across major crops to meet agricultural and food demands.",
+            subtitle: "(Hybrid & improved varieties)",
+            description: "Nirmal Seeds develops and markets innovative hybrids and varieties across India's major important field crops.\n\nThis segment is a major contributor to scale, acreage, and consistent demand.",
             image: "/images/home-page/product-categories-field-crops.png",
-            link: "#"
+            link: "/products/field-crops"
         },
         {
             title: "Vegetable Seeds",
             subtitle: "(Hybrid & Improved Varieties)",
-            description: "A rapidly growing segment supported by advanced breeding program targeting global distribution.",
+            description: "A rapidly growing segment supported by advanced breeding programs and global collaborations.",
             image: "/images/home-page/product-categories-vegetable-seeds.png",
-            link: "#"
+            link: "/products/vegetable-seeds"
         },
         {
-            title: "Nutritionally Enriched / Biofortified Crops",
-            description: "Nirmal Seeds is deeply invested in the biofortified ecosystem globally, partnering with ICAR.",
+            title: "Nutritionally Enriched/\nBiofortified Crops",
+            description: "Nirmal Seeds is among the few Indian companies active in nutrition breeding, partnering with global institutions (HarvestPlus, ICRISAT, CIMMYT).",
             image: "/images/home-page/product-categories-biofortified-crops.png",
             link: "#"
         }
@@ -84,13 +108,13 @@ export const awardsData = {
     title: "AWARDS & ACHIEVEMENTS",
     awards: [
         {
-            title: "BIRAC Innovator Award - 2020",
-            description: "Awarded for breakthrough research in agricultural biotechnology.",
+            title: "BIRAC Innovative Award – 2016",
+            description: "Awarded for breakthrough innovation in agricultural biotechnology.",
             image: "/images/home-page/awards-birac.png"
         },
         {
-            title: "Vasantrao Naik Krushi Pratishthan Award",
-            description: "The Chief Minister of Maharashtra, Hon. Shri Devendra Fadnavis presenting the Vasantrao Naik Krushi Puraskar.",
+            title: "Vasantrao Naik Krushi Falotpadan Award",
+            description: "The Chief Minister of Maharashtra, Hon. Shri Devendra Fadnavis presenting \"Vasantrao Naik Krushi Falotpadan Award\" to Shri R.O.Patil (CMD) for his significant contributions in the field of Horticulture.",
             image: "/images/home-page/awards-vasantro-award.png"
         },
         {
@@ -103,7 +127,7 @@ export const awardsData = {
 
 
 export const testimonialData = {
-    title: "FARMER TESTIMONIAL",
+    title: "FARMER  TESTIMONIAL",
     quotes: [
         {
             text: "I have been farming for the past 20 years and have always relied on Nirmal Seeds for my crops. The yield is consistently high and the seed quality is excellent. I highly recommend them to all farmers.",
@@ -137,7 +161,7 @@ export const navItems: NavItem[] = [
     { label: "Home", href: "/" },
     {
         label: "Overview",
-        href: "/about",
+        href: "#",
         children: [
             { label: "About Us", href: "/about" },
             { label: "Management", href: "/management" },
@@ -146,7 +170,7 @@ export const navItems: NavItem[] = [
     },
     {
         label: "Products",
-        href: "/products",
+        href: "#",
         children: [
             { label: "Field Crops", href: "/products/field-crops" },
             { label: "Vegetable Seeds", href: "/products/vegetable-seeds" },
@@ -155,12 +179,11 @@ export const navItems: NavItem[] = [
     },
     {
         label: "Departments",
-        href: "/department",
+        href: "#",
         children: [
             { label: "Research & Development", href: "/department/r-d" },
             { label: "Quality Assurance", href: "/department/quality-assurance" },
             { label: "Production & Processing", href: "/department/production-processing" },
-            { label: "Bio Tech & Input division", href: "/department/biotech-input" },
         ]
     },
     { label: "CSR @ Nirmal", href: "/csr" },
@@ -173,33 +196,32 @@ export const footerData = {
     sections: [
         {
             title: "About Nirmal Seeds",
-            content: "Nirmal Seeds is a research-driven, innovative seed company providing hybrid and improved varieties of Field and Vegetable crops. We strive to empower farmers and enrich lives through sustainable agriculture."
+            content: "(NSPL) was established in 1988 by a group of agropreneurs at Pachora in Jalgaon district of Maharashtra, India. The organization was started with an idea of 'Need based Research' in the field of seed technology for the farming community."
         },
         {
             title: "Nirmal Departments",
             links: [
-                { label: "Research & Development", href: "/department/production-processing" },
-                { label: "Quality Assurance", href: "/department/production-processing" },
-                { label: "Seed Processing", href: "/department/production-processing" },
-                { label: "Biotech Lab Facilities", href: "/department/production-processing" }
+                { label: "Research & development", href: "/department/r-d" },
+                { label: "Quality Assurance", href: "/department/quality-assurance" },
+                { label: "Production & processing", href: "/department/production-processing" }
             ]
         },
         {
             title: "Products",
             links: [
                 { label: "Field Crops", href: "/products/field-crops" },
-                { label: "Vegetable Crops", href: "/products/field-crops" },
-                { label: "Biofortified", href: "/products/field-crops" }
+                { label: "Vegetable Seeds", href: "/products/vegetable-seeds" },
+                { label: "Bio Products", href: "/products/bio-products" }
             ]
         },
         {
             title: "Contact Us",
             links: [
-                { label: "P.O.Box No.: 63, Bhadgaon Road, Pachora-424201. Jalgaon (MH).", href: "#" },
-                { label: "Phone : +91-2596-244366", href: "tel:+912596244366" },
-                { label: "Email: info@nirmalseedsindia.com", href: "mailto:info@nirmalseedsindia.com" }
+                { label: "P.O.Box No.: 63, Bhadgaon Road, Pachora-424201. Jalgaon (MH).", href: "#", icon: "map-pin" },
+                { label: "Phone : +91-2596-244366", href: "tel:+912596244366", icon: "phone" },
+                { label: "Email: info@nirmalseedsindia.com", href: "mailto:info@nirmalseedsindia.com", icon: "mail" }
             ]
         }
     ],
-    copyrightText: "Copyright ©️ 2026 Nirmal Seeds Ltd. All rights reserved. Crafted by Greysell."
+    copyrightText: "Copyright © 2026 Nirmal Seeds Ltd. All rights reserved. Crafted by Greysell"
 }

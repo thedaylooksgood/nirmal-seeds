@@ -12,14 +12,14 @@ export function DepartmentContent() {
                         as="h1"
                         className="text-[30px] sm:text-[38px] md:text-[46px] lg:text-[54px] tracking-wide leading-tight"
                     >
-                        <span className="font-light text-[#333]">OUR </span>
+                        <span className="font-light text-[#111]">OUR </span>
                         <span className="font-extrabold text-nirmal-green">DEPARTMENTS</span>
                     </Text>
                 </div>
 
                 {/* Intro */}
                 <p
-                    className="text-[13px] sm:text-[14px] md:text-[15px] text-[#444] leading-[1.85] mb-10 md:mb-14 text-justify"
+                    className="text-[13px] sm:text-[14px] md:text-[15px] leading-[1.85] mb-10 md:mb-14 text-justify font-medium text-[#111]"
                     dangerouslySetInnerHTML={{
                         __html: departmentContentData.introParagraph,
                     }}
@@ -49,7 +49,7 @@ export function DepartmentContent() {
                                 >
                                     {dept.title}
                                 </Text>
-                                <p className="text-[13px] sm:text-[14px] md:text-[15px] text-[#444] leading-[1.85] text-justify mb-5">
+                                <p className="text-[13px] sm:text-[14px] md:text-[15px] leading-[1.85] text-justify mb-5 font-medium text-[#111]">
                                     {dept.description}
                                 </p>
 
@@ -58,7 +58,7 @@ export function DepartmentContent() {
                                     {dept.highlights.map((item, i) => (
                                         <span
                                             key={i}
-                                            className="px-3 py-1.5 bg-nirmal-yellow/20 text-nirmal-darkgreen text-[11px] sm:text-[12px] font-semibold rounded-md border border-nirmal-yellow/40"
+                                            className="px-3 py-1.5 bg-nirmal-yellow/20 text-nirmal-darkgreen text-[11px] sm:text-[12px] font-medium rounded-md border border-nirmal-yellow/40"
                                         >
                                             {item}
                                         </span>

@@ -12,14 +12,14 @@ export function PatentContent() {
                         as="h1"
                         className="text-[30px] sm:text-[38px] md:text-[46px] lg:text-[54px] tracking-wide leading-tight"
                     >
-                        <span className="font-light text-[#333]">PATENTS & </span>
+                        <span className="font-light text-[#111]">PATENTS & </span>
                         <span className="font-extrabold text-nirmal-green">INTELLECTUAL PROPERTY</span>
                     </Text>
                 </div>
 
                 {/* Intro */}
                 <p
-                    className="text-[13px] sm:text-[14px] md:text-[15px] text-[#444] leading-[1.85] mb-10 md:mb-14 text-justify"
+                    className="text-[13px] sm:text-[14px] md:text-[15px] leading-[1.85] mb-10 md:mb-14 text-justify font-medium text-[#111]"
                     dangerouslySetInnerHTML={{
                         __html: patentContentData.introParagraph,
                     }}
@@ -37,7 +37,7 @@ export function PatentContent() {
                                 <span className="text-[40px] sm:text-[48px] font-extrabold text-nirmal-green leading-none">
                                     {patent.count}
                                 </span>
-                                <span className="text-[12px] sm:text-[13px] font-semibold text-[#666] uppercase tracking-wider mb-1.5">
+                                <span className="text-[12px] sm:text-[13px] font-medium text-[#111] uppercase tracking-wider mb-1.5">
                                     {patent.label}
                                 </span>
                             </div>
@@ -48,7 +48,7 @@ export function PatentContent() {
                             >
                                 {patent.title}
                             </Text>
-                            <p className="text-[13px] sm:text-[14px] text-[#555] leading-[1.8] text-justify">
+                            <p className="text-[13px] sm:text-[14px] leading-[1.8] text-justify font-medium text-[#111]">
                                 {patent.description}
                             </p>
                         </div>

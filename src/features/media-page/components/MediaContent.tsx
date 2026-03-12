@@ -13,12 +13,12 @@ export function MediaContent() {
                         className="text-[30px] sm:text-[38px] md:text-[46px] lg:text-[54px] tracking-wide leading-tight"
                     >
                         <span className="font-light text-nirmal-green tracking-wider">{awardsContentData.title} </span>
-                        <span className="font-extrabold text-nirmal-green tracking-wide">{awardsContentData.titleHighlight}</span>
+                        <span className="font-semibold text-nirmal-green tracking-wide">{awardsContentData.titleHighlight}</span>
                     </Text>
                 </div>
 
                 {/* Awards — 3-column grid to create a central alternating line */}
-                <div className="max-w-[1100px] mx-auto space-y-10 md:space-y-14">
+                <div className="max-w-[1100px] mx-auto space-y-4 md:space-y-6 lg:space-y-8">
                     {awardsContentData.awards.map((award, index) => {
                         const isImageLeft = index % 2 === 0
                         // Light green for odd rows, Gold/Orange for even rows
@@ -27,25 +27,25 @@ export function MediaContent() {
                         return (
                             <div
                                 key={index}
-                                className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-6 md:gap-10 lg:gap-14"
+                                className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-1 md:gap-1 lg:gap-1"
                             >
                                 {/* LEFT COLUMN */}
-                                <div className="w-full flex">
+                                <div className="w-full flex h-[140px] sm:h-[160px] md:h-[180px]">
                                     {isImageLeft ? (
-                                        <div className="w-full h-full">
+                                        <div className="w-full h-full overflow-hidden border border-gray-100 shadow-sm bg-gray-50">
                                             <img
                                                 src={award.image}
                                                 alt={award.title}
-                                                className="w-full h-full min-h-[160px] md:max-h-[240px] object-cover rounded-sm shadow-sm"
+                                                className="w-full h-full object-cover"
                                             />
                                         </div>
                                     ) : (
-                                        <div className="w-full flex flex-col justify-center py-2 lg:pr-8">
-                                            <h3 className="text-[17px] sm:text-[19px] md:text-[21px] font-bold text-[#111] mb-2 leading-snug">
+                                        <div className="w-full h-full flex flex-col justify-center py-1 lg:pr-4 md:pr-4">
+                                            <h3 className="text-[16px] sm:text-[18px] md:text-[20px] font-bold text-[#111] mb-1 leading-snug">
                                                 {award.title}
                                             </h3>
                                             {award.description && (
-                                                <p className="text-[13px] sm:text-[14px] text-[#444] leading-[1.7]">
+                                                <p className="text-[13px] sm:text-[14px] leading-[1.6] font-medium text-gray-700">
                                                     {award.description}
                                                 </p>
                                             )}
@@ -54,27 +54,26 @@ export function MediaContent() {
                                 </div>
 
                                 {/* CENTER BAR - Only visible on desktop/tablet */}
-                                <div className="hidden md:flex justify-center w-[6px] lg:w-[8px]">
-                                    <div className={`w-full h-full ${barColor}`}></div>
+                                <div className="hidden md:flex justify-center w-[4px] lg:w-[6px] h-full shrink-0">
+                                    <div className={`w-[4px] lg:w-[6px] h-full ${barColor}`}></div>
                                 </div>
 
                                 {/* RIGHT COLUMN */}
-                                <div className="w-full flex">
+                                <div className="w-full flex h-[140px] sm:h-[160px] md:h-[180px]">
                                     {!isImageLeft ? (
-                                        <div className="w-full h-full">
-                                            <img
-                                                src={award.image}
-                                                alt={award.title}
-                                                className="w-full h-full min-h-[160px] md:max-h-[240px] object-cover rounded-sm shadow-sm"
-                                            />
+                                        <div className="w-full h-full overflow-hidden border border-gray-100 shadow-sm bg-gray-50">                                            <img
+                                            src={award.image}
+                                            alt={award.title}
+                                            className="w-full h-full object-cover"
+                                        />
                                         </div>
                                     ) : (
-                                        <div className="w-full flex flex-col justify-center py-2 lg:pr-8">
-                                            <h3 className="text-[17px] sm:text-[19px] md:text-[21px] font-bold text-[#111] mb-2 leading-snug">
+                                        <div className="w-full h-full flex flex-col justify-center py-1 lg:pl-4 md:pl-4">
+                                            <h3 className="text-[16px] sm:text-[18px] md:text-[20px] font-bold text-[#111] mb-1 leading-snug">
                                                 {award.title}
                                             </h3>
                                             {award.description && (
-                                                <p className="text-[13px] sm:text-[14px] text-[#444] leading-[1.7]">
+                                                <p className="text-[13px] sm:text-[14px] leading-[1.6] font-medium text-gray-700">
                                                     {award.description}
                                                 </p>
                                             )}

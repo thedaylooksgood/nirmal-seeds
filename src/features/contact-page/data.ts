@@ -5,7 +5,7 @@ export const contactHeroData = {
         { label: "Contact us", href: "/contact" },
     ],
     backgroundImage:
-        "/images/contact-hero.png",
+        "images/Contact-location/locations-hero-section.png",
 }
 
 export const contactInfoData = {
@@ -41,7 +41,7 @@ export const locationHeroData = {
         { label: "Contact us", href: "/contact" },
         { label: "Locations", href: "/contact#locations" },
     ],
-    backgroundImage: "/images/location-hero.png",
+    backgroundImage: "/images/Contact-location/locations-hero-section.png",
 }
 
 export const locationSectionData = {

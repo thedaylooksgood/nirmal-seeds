@@ -6,7 +6,7 @@ export const productionProcessingHeroData = {
         { label: "Production & processing", href: "/department/production-processing" },
     ],
     backgroundImage:
-        "https://images.unsplash.com/photo-1581093458791-9d42e3c2fd45?q=80&w=2070&auto=format&fit=crop",
+        "/images/Department-production&processing/hero-section.png",
 }
 
 export const productionProcessingData = {
@@ -22,7 +22,7 @@ export const productionProcessingData = {
                 "Built on coordination, scale, and process discipline, seed production at Nirmal Seeds ensures that every batch entering the quality system is grown and handled with care, consistency, and full traceability—reinforcing reliability across our supply chain.",
             ],
             image:
-                "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=2071&auto=format&fit=crop",
+                "/images/Department-production&processing/seed-dept.png",
             background: "white",
         },
         {
@@ -31,7 +31,7 @@ export const productionProcessingData = {
                 'Five automated seed-processing plants at <strong>Pachora, Godhra, Chahanrd, Chikhldi and Raipur</strong> handle cleaning, grading, treating, and packing with high throughput and uniformity. Each plant is equipped with modern machinery that reduces manual handling and preserves seed integrity during post-harvest operations.',
             contentParagraphs: [],
             image:
-                "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
+                "/images/Department-production&processing/processing-dept.png",
             background: "gradient",
         },
     ],

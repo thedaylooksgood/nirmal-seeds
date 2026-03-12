@@ -1,7 +1,5 @@
 import { InnerPageHeroBanner } from "@/components/ui/InnerPageHeroBanner"
 import { CsrContent } from "@/features/csr-page/components/CsrContent"
-import { CommunitySection } from "@/features/csr-page/components/CommunitySection"
-import { EnvironmentSection } from "@/features/csr-page/components/EnvironmentSection"
 import { csrHeroData } from "@/features/csr-page/data"
 
 export const metadata = {
@@ -17,8 +15,6 @@ export default function CsrPage() {
                 backgroundImage={csrHeroData.backgroundImage}
             />
             <CsrContent />
-            <CommunitySection />
-            <EnvironmentSection />
         </main>
     )
 }
