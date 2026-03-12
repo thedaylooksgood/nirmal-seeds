@@ -80,7 +80,7 @@ export function VisionMission() {
                             ))}
                         </ul>
 
-                        <p className="text-[13px] sm:text-[14px] md:text-[15px] text-[#c9a84c] leading-[1.4] font-medium">
+                        <p className="text-[13px] sm:text-[14px] md:text-[15px] text-[#111] leading-[1.4] font-bold">
                             {missionData.tagline}
                         </p>
                     </div>

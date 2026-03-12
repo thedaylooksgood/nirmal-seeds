@@ -56,7 +56,7 @@ export function ProductCategories() {
         <section className="w-full pt-8 sm:pt-10 pb-12 sm:pb-16 relative flex flex-col items-center overflow-hidden min-h-[auto]">
             {/* Background Gradients simulating grass/fields */}
             <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-nirmal-lightgreen/40 z-0"></div>
-            <div className="absolute bottom-0 w-[120%] left-[-10%] h-[50%] bg-[url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop')] bg-cover bg-top opacity-30 z-0 mask-image-gradient"></div>
+            <div className="absolute bottom-0 w-[120%] left-[-10%] h-[50%] bg-[url('/images/home-page/hero-banner.png')] bg-cover bg-top opacity-30 z-0 mask-image-gradient"></div>
 
             <div className="section-container relative z-10 text-center flex flex-col items-center w-full">
                 <Text as="h2" className="mb-6 sm:mb-8 text-[28px] sm:text-[36px] md:text-[46px] lg:text-[52px] xl:text-[56px] tracking-tight leading-[1.1] relative uppercase">

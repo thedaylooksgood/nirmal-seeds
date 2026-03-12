@@ -36,13 +36,14 @@ export function RDContent() {
                         </p>
                     </div>
 
-                    {/* Full Width Image Here */}
                     <div className="w-full h-auto mb-8 rounded-sm overflow-hidden shadow-sm">
-                        <img
-                            src="/images/rd-field.png"
-                            alt="Research Farmland"
-                            className="w-full h-auto min-h-[150px] md:min-h-[200px] max-h-[350px] object-cover"
-                        />
+                        {sections[0].image && (
+                            <img
+                                src={sections[0].image}
+                                alt="Research Farmland"
+                                className="w-full h-auto min-h-[150px] md:min-h-[200px] max-h-[350px] object-cover"
+                            />
+                        )}
                     </div>
 
                     {/* Bottom Paragraphs */}

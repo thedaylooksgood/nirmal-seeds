@@ -47,7 +47,7 @@ const PdfProxyViewer = ({ src, containerWidth }: { src: string, containerWidth: 
     if (!blobUrl) return <p className="py-10 text-[#111]">Securely loading PDF...</p>;
 
     return (
-        <div className="max-h-[350px] md:max-h-[450px] overflow-y-auto overflow-x-hidden border border-gray-200 shadow-inner w-full flex justify-center bg-gray-100">
+        <div className="max-h-[350px] md:max-h-[450px] overflow-hidden border border-gray-200 shadow-inner w-full flex justify-center items-start bg-gray-100">
             <Document
                 file={blobUrl}
                 loading={<p className="py-10 text-[#111]">Rendering PDF...</p>}
@@ -55,7 +55,7 @@ const PdfProxyViewer = ({ src, containerWidth }: { src: string, containerWidth: 
             >
                 <Page
                     pageNumber={1}
-                    width={containerWidth > 800 ? 800 : containerWidth}
+                    height={350}
                     renderTextLayer={false}
                     renderAnnotationLayer={false}
                 />

@@ -17,7 +17,7 @@ export function CsrContent() {
                             <span className="font-light pr-2">
                                 {csrContentData.title}
                             </span>
-                            <span className="font-bold">
+                            <span className="font-semibold">
                                 {csrContentData.titleHighlight}
                             </span>
                         </Text>
@@ -28,7 +28,7 @@ export function CsrContent() {
                         <h2 className="text-[17px] sm:text-[19px] md:text-[21px] font-bold text-[#111] mb-2">
                             {csrContentData.subtitle}
                         </h2>
-                        
+
                         <div className="flex flex-col gap-2 mb-4 sm:mb-5">
                             {csrContentData.paragraphs.map((paragraph, index) => (
                                 <p
@@ -59,7 +59,7 @@ export function CsrContent() {
             >
                 <div className="section-container max-w-6xl mx-auto px-4 sm:px-6">
                     <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-8">
-                        
+
                         {/* Left Column */}
                         <div className="flex flex-col h-full justify-between">
                             <div>
@@ -118,7 +118,7 @@ export function CsrContent() {
             >
                 <div className="section-container max-w-6xl mx-auto px-4 sm:px-6">
                     <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-8 items-stretch">
-                        
+
                         {/* Left Column */}
                         <div className="flex flex-col h-full">
                             <h2 className="text-[17px] sm:text-[19px] md:text-[21px] font-bold text-[#111] mb-1">

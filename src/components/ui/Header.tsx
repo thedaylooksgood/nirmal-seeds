@@ -70,9 +70,15 @@ export function Header({ navItems }: HeaderProps) {
                 {/* DESKTOP NAV — right aligned */}
                 <nav className="hidden md:flex items-center h-full">
                     {navItems.map((item, index) => {
-                        const active = item.href === "/"
-                            ? pathname === "/"
-                            : pathname.startsWith(item.href);
+                        const isChildActive = item.children?.some(child => {
+                            if (!child.href || child.href === "#" || child.href === "") return false;
+                            // Check for exact match or sub-path match
+                            return pathname === child.href || pathname.startsWith(child.href + "/");
+                        });
+                        const baseActive = item.href && item.href !== "#" && item.href !== ""
+                            ? (item.href === "/" ? pathname === "/" : pathname.startsWith(item.href))
+                            : false;
+                        const active = baseActive || isChildActive;
 
                         const hasChildren = item.children && item.children.length > 0;
 
@@ -106,7 +112,12 @@ export function Header({ navItems }: HeaderProps) {
                                             <Link
                                                 key={idx}
                                                 href={child.href}
-                                                className="block px-7 py-3 text-[13px] lg:text-[15px] text-gray-700 hover:bg-[#3c8e00] hover:text-white transition-colors duration-200 font-semibold"
+                                                className={cn(
+                                                    "block px-7 py-3 text-[13px] lg:text-[15px] transition-colors duration-200 font-semibold",
+                                                    pathname === child.href
+                                                        ? "bg-[#3c8e00] text-white"
+                                                        : "text-gray-700 hover:bg-[#3c8e00] hover:text-white"
+                                                )}
                                             >
                                                 {child.label}
                                             </Link>
@@ -137,9 +148,15 @@ export function Header({ navItems }: HeaderProps) {
             >
                 <div className="flex flex-col p-6 space-y-4 overflow-y-auto h-full bg-gray-50/50">
                     {navItems.map((item, index) => {
-                        const active = item.href === "/"
-                            ? pathname === "/"
-                            : pathname.startsWith(item.href);
+                        const isChildActive = item.children?.some(child => {
+                            if (!child.href || child.href === "#" || child.href === "") return false;
+                            // Check for exact match or sub-path match
+                            return pathname === child.href || pathname.startsWith(child.href + "/");
+                        });
+                        const baseActive = item.href && item.href !== "#" && item.href !== ""
+                            ? (item.href === "/" ? pathname === "/" : pathname.startsWith(item.href))
+                            : false;
+                        const active = baseActive || isChildActive;
 
                         const hasChildren = item.children && item.children.length > 0;
                         const isOpen = openMobileSubmenu === item.label;
@@ -185,7 +202,12 @@ export function Header({ navItems }: HeaderProps) {
                                                 key={idx}
                                                 href={child.href}
                                                 onClick={() => setIsMenuOpen(false)}
-                                                className="p-4 rounded-lg text-[16px] font-semibold text-gray-700 bg-white border border-gray-50 hover:text-[#3c8e00] shadow-sm"
+                                                className={cn(
+                                                    "p-4 rounded-lg text-[16px] font-semibold transition-all duration-300 flex items-center justify-between shadow-sm",
+                                                    pathname === child.href
+                                                        ? "bg-[#3c8e00] text-white shadow-md shadow-green-100"
+                                                        : "bg-white text-gray-700 border border-gray-50 hover:text-[#3c8e00]"
+                                                )}
                                             >
                                                 {child.label}
                                             </Link>

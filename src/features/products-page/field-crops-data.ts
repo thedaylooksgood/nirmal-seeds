@@ -7,7 +7,7 @@ export const fieldCropsHeroData = {
         { label: "Field Crops", href: "/products/field-crops" },
     ],
     backgroundImage:
-        "https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=2070&auto=format&fit=crop",
+        "/images/home-page/hero-banner.png",
 }
 
 export const fieldCropsContentData = {
@@ -18,53 +18,53 @@ export const fieldCropsContentData = {
     crops: [
         {
             name: "Cotton",
-            image: "https://images.unsplash.com/photo-1616431101491-554c0932ea40?q=80&w=400&auto=format&fit=crop",
-            href: "#",
+            image: "/products/prodyct-filedcrop-cotton/image 118.png",
+            href: "/products/field-crops/cotton",
         },
         {
             name: "Sorghum",
-            image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=400&auto=format&fit=crop",
-            href: "#",
+            image: "/products/product-fieldcrops-allsorghum/image 117.png",
+            href: "/products/field-crops/sorghum",
         },
         {
             name: "Pearl Millet",
-            image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=400&auto=format&fit=crop",
-            href: "#",
+            image: "/products/product-fieldcrop-pearlmillet/image 121.png",
+            href: "/products/field-crops/pearl-millet",
         },
         {
             name: "Maize",
-            image: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?q=80&w=400&auto=format&fit=crop",
-            href: "#",
+            image: "/products/product-fileds-crop-all-maize/image 94.png",
+            href: "/products/field-crops/maize",
         },
         {
             name: "Wheat",
-            image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=400&auto=format&fit=crop",
-            href: "#",
+            image: "/products/product-fileds-crop-all-crops/wheat.png",
+            href: "/products/field-crops/wheat",
         },
         {
             name: "Paddy",
-            image: "https://images.unsplash.com/photo-1504700610630-ac6aba3536d3?q=80&w=400&auto=format&fit=crop",
-            href: "#",
+            image: "/products/product-fileds-crop-all-crops/paddy.png",
+            href: "/products/field-crops/paddy",
         },
         {
             name: "Soybean",
-            image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=400&auto=format&fit=crop",
-            href: "#",
+            image: "/products/product-fileds-crop-all-crops/soybean.png",
+            href: "/products/field-crops/soybean",
         },
         {
             name: "Mustard",
-            image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=400&auto=format&fit=crop",
-            href: "#",
+            image: "/products/product-fileds-crop-all-crops/mustard.png",
+            href: "/products/field-crops/mustard",
         },
         {
             name: "Pigeonpea",
-            image: "https://images.unsplash.com/photo-1509622905150-fa66d3906e09?q=80&w=400&auto=format&fit=crop",
-            href: "#",
+            image: "/products/product-fileds-crop-all-crops/pigeonpea.png",
+            href: "/products/field-crops/pigeonpea",
         },
         {
             name: "Gram",
-            image: "https://images.unsplash.com/photo-1609780447631-05b93e5a88ea?q=80&w=400&auto=format&fit=crop",
-            href: "#",
+            image: "/products/product-fileds-crop-all-crops/gram.png",
+            href: "/products/field-crops/gram",
         },
     ],
 }

@@ -6,7 +6,7 @@ export const csrHeroData = {
         { label: "CSR @ Nirmal", href: "/csr" },
     ],
     backgroundImage:
-        "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop",
+        "/images/CSR-banner/hero section.png",
 }
 
 export const csrContentData = {
@@ -19,7 +19,7 @@ export const csrContentData = {
         "Relief support such as seeds for flood-affected farmers further reinforces our commitment to agricultural resilience.",
         "Under our CSR initiatives, free seeds were provided to the families of deceased farmers.",
     ],
-    image: "https://images.unsplash.com/photo-1605000780447-ca90695de96b?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/CSR-banner/growing-responsibility.png",
     imageAlt: "Nirmal Seeds CSR farmer training event",
 }
 
@@ -29,9 +29,9 @@ export const communityData = {
         "Nirmal views community health as part of agricultural progress. A dedicated children's garden and park in Pachora offers families a safe, green space to grow together.",
         "Yoga camps are organized regularly to build preventive health awareness and stronger participation at the village level.",
     ],
-    imageLeft: "https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?q=80&w=2070&auto=format&fit=crop",
+    imageLeft: "/images/CSR-banner/community-well-being-left-side.png",
     imageLeftAlt: "Clean drinking water support",
-    imageRight: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2070&auto=format&fit=crop",
+    imageRight: "/images/CSR-banner/community-well-being-right-side.png",
     imageRightAlt: "Community yoga and well-being programs",
     paragraphsRight: [
         "Clean drinking water support for remote villages strengthens everyday community well-being.",
@@ -48,6 +48,6 @@ export const environmentData = {
         "The company advances sustainability by providing chemical-free, eco-friendly bio-products that reduce long-term soil and environmental stress.",
         "During the COVID-19 pandemic, Nirmal Seeds supported local communities with beds, sanitizers and masks; thus, reinforcing environmental safety alongside public health.",
     ],
-    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2113&auto=format&fit=crop",
+    image: "/images/CSR-banner/environment-&-climate-remponsibility.png",
     imageAlt: "Nirmal Seeds environmental and community initiatives",
 }

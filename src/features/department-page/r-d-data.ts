@@ -6,7 +6,7 @@ export const rdHeroData = {
         { label: "Research & Development", href: "/department/r-d" },
     ],
     backgroundImage:
-        "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=2070&auto=format&fit=crop",
+        "/images/Department-R&D/banner-image.png",
 }
 
 export const rdData = {
@@ -20,7 +20,7 @@ export const rdData = {
             contentParagraphs: [
                 "Our efforts focus on developing hybrids and varieties that combine high yield with strong tolerance to biotic and abiotic stresses, helping farmers reduce cultivation costs by lowering dependence on chemical inputs. Beyond field performance, our breeding and crop management practices are aligned with global standards, ensuring that the products developed through our programmes remain competitive, adaptable, and relevant across diverse markets",
             ],
-            image: "/images/rd-field.png", // Will be replaced by actual image path
+            image: "/images/Department-R&D/content-field-image.png",
         },
         {
             title: "",

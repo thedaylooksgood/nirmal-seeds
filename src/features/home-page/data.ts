@@ -16,7 +16,7 @@ export const companyGlanceData = {
     description: "Founded in 1988, Nirmal Seeds is a research-driven seed and agri-biotech company that shapes Indian agriculture through\nscience, innovation, and farmer-centric solutions.\n\nNirmal Seeds continues to build on a strong legacy—combining science, quality and nationwide reach to support India's\nfarmers and strengthen the country's agricultural future.",
     items: [
         {
-            icon: "chemistry", // We'll map this to a Lucide icon
+            icon: "chemistry",
             text: "35+ years of\nseed research\n& innovation"
         },
         {
@@ -26,6 +26,30 @@ export const companyGlanceData = {
         {
             icon: "farm",
             text: "80+ hectares research\nfarm + multi-location\ntrials across India"
+        },
+        {
+            icon: "certificate",
+            text: "2 NABL-accreditation\none for seed testing lab\nand molecular testing lab"
+        },
+        {
+            icon: "chemistry",
+            text: "177+ research seed\nproducts across\n35 crops"
+        },
+        {
+            icon: "farm",
+            text: "Growing presence\nacross\n23 states"
+        },
+        {
+            icon: "chemistry",
+            text: "6,000+ distributors &\n28,000+ retail\ntouchpoints"
+        },
+        {
+            icon: "chemistry",
+            text: "Ultra-modern bio-input\nfacilities in MH,\nGujarat & Assam"
+        },
+        {
+            icon: "certificate",
+            text: "2 patented bio-stimulant\ntechnologies for\nsustainable agriculture"
         }
     ]
 }
@@ -38,14 +62,14 @@ export const productCategoriesData = {
             subtitle: "(Hybrid & improved varieties)",
             description: "Nirmal Seeds develops and markets innovative hybrids and varieties across India's major important field crops.\n\nThis segment is a major contributor to scale, acreage, and consistent demand.",
             image: "/images/home-page/product-categories-field-crops.png",
-            link: "#"
+            link: "/products/field-crops"
         },
         {
             title: "Vegetable Seeds",
             subtitle: "(Hybrid & Improved Varieties)",
             description: "A rapidly growing segment supported by advanced breeding programs and global collaborations.",
             image: "/images/home-page/product-categories-vegetable-seeds.png",
-            link: "#"
+            link: "/products/vegetable-seeds"
         },
         {
             title: "Nutritionally Enriched/\nBiofortified Crops",
@@ -149,8 +173,8 @@ export const navItems: NavItem[] = [
         href: "#",
         children: [
             { label: "Field Crops", href: "/products/field-crops" },
-            { label: "Vegetable Seeds", href: "" },
-            { label: "Bio Products", href: "" },
+            { label: "Vegetable Seeds", href: "/products/vegetable-seeds" },
+            { label: "Bio Products", href: "/products/bio-products" },
         ]
     },
     {
@@ -160,7 +184,6 @@ export const navItems: NavItem[] = [
             { label: "Research & Development", href: "/department/r-d" },
             { label: "Quality Assurance", href: "/department/quality-assurance" },
             { label: "Production & Processing", href: "/department/production-processing" },
-            { label: "Bio Tech & Input division", href: "" },
         ]
     },
     { label: "CSR @ Nirmal", href: "/csr" },
@@ -180,16 +203,15 @@ export const footerData = {
             links: [
                 { label: "Research & development", href: "/department/r-d" },
                 { label: "Quality Assurance", href: "/department/quality-assurance" },
-                { label: "Production & processing", href: "/department/production-processing" },
-                { label: "Bio Tech & Input division", href: "" }
+                { label: "Production & processing", href: "/department/production-processing" }
             ]
         },
         {
             title: "Products",
             links: [
                 { label: "Field Crops", href: "/products/field-crops" },
-                { label: "Vegetable Seeds", href: "" },
-                { label: "Bio Products", href: "" }
+                { label: "Vegetable Seeds", href: "/products/vegetable-seeds" },
+                { label: "Bio Products", href: "/products/bio-products" }
             ]
         },
         {

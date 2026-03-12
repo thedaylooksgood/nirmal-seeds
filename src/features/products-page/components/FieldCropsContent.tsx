@@ -57,7 +57,7 @@ export function FieldCropsContent() {
                 className="w-full py-10 sm:py-14 md:py-16 pb-20 sm:pb-28"
                 style={{
                     background:
-                        "linear-gradient(to bottom, #F5D57A 0%, #FFF0B7 35%, #ffffff 100%)",
+                        "linear-gradient(to bottom, #fee0a0 0%, #fee0a0 20%, #fef0c9 50%, #ffffff 100%)",
                 }}
             >
                 <div className="section-container">

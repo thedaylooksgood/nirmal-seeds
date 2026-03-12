@@ -10,7 +10,7 @@ export function TestimonialSection() {
     const currentQuote = testimonialData.quotes[activeIndex]
 
     return (
-        <section className="w-full pt-8 pb-10 px-4 flex flex-col items-center text-center" style={{ background: 'linear-gradient(to bottom, #F5D57A 0%, #F5D57A 25%, #FFF0B7 55%, #ffffff 100%)' }}>
+        <section className="w-full pt-8 pb-10 px-4 flex flex-col items-center text-center" style={{ background: 'linear-gradient(to bottom, #fee0a0 0%, #fee0a0 20%, #fef0c9 50%, #ffffff 100%)' }}>
             <div className="section-container max-w-4xl relative">
 
                 <Text as="h2" className="mb-4 sm:mb-6 text-black inline-block uppercase tracking-tight text-[28px] sm:text-[36px] md:text-[46px] lg:text-[52px] xl:text-[56px] leading-[1.1] relative">

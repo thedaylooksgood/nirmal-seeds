@@ -1,41 +1,39 @@
 import { InnerPageHeroBanner } from "@/components/ui/InnerPageHeroBanner";
+import { MainCategoryContent } from "@/features/products-page/components/MainCategoryContent";
 
 export const metadata = {
     title: "Vegetable Seeds - Nirmal Seeds",
     description: "Premium hybrid and improved vegetable varieties from Nirmal Seeds.",
 };
 
+const dummyCrops = [
+    { name: "Tomato", image: "/products/product-mixfields-crops/image 132.png", href: "/products/vegetable-seeds/tomato" },
+    { name: "Chilli", image: "/products/product-mixfields-crops/image 128.png", href: "/products/vegetable-seeds/chilli" },
+    { name: "Okra", image: "/products/product-mixfields-crops/image 136.png", href: "/products/vegetable-seeds/okra" },
+    { name: "Brinjal", image: "/products/products-mixfieldcrops/image 139.png", href: "/products/vegetable-seeds/brinjal" },
+    { name: "Watermelon", image: "/products/product-mixfields-crops/image 135.png", href: "/products/vegetable-seeds/watermelon" },
+    { name: "Bottle Gourd", image: "/products/product-mixfields-crops/image 137.png", href: "/products/vegetable-seeds/bottle-gourd" },
+    { name: "Onion", image: "/products/product-mixfields-crops/image 134.png", href: "/products/vegetable-seeds/onion" },
+    { name: "Cabbage", image: "/products/products-mixfieldcrops/image 140.png", href: "/products/vegetable-seeds/cabbage" }
+];
+
 export default function VegetableSeedsPage() {
     return (
-        <main className="min-h-screen">
+        <main>
             <InnerPageHeroBanner
                 breadcrumb={[
-                    { label: "HOME", href: "/" },
-                    { label: "PRODUCTS", href: "/products" },
-                    { label: "VEGETABLE SEEDS", href: "/products/vegetable-seeds" }
+                    { label: "Home", href: "/" },
+                    { label: "Products", href: "/products" },
+                    { label: "Vegetable Seeds", href: "/products/vegetable-seeds" }
                 ]}
-                backgroundImage="/images/home-page/product-categories-vegetable-seeds.png"
+                backgroundImage="/images/home-page/hero-banner.png"
             />
-            <div className="section-container py-20">
-                <h1 className="text-4xl font-bold text-nirmal-green mb-6 uppercase tracking-tight">Vegetable Seeds</h1>
-                <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mb-12">
-                    A rapidly growing segment supported by advanced breeding programs targeting global distribution and high-yield disease resistance.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {["Tomato", "Chilli", "Okra", "Brinjal", "Gourds", "Cucumber", "Cabbage", "Onion"].map((crop, i) => (
-                        <div key={i} className="group cursor-pointer">
-                            <div className="aspect-square bg-gray-100 rounded-2xl mb-4 overflow-hidden relative">
-                                <div className="absolute inset-0 bg-nirmal-green/0 group-hover:bg-nirmal-green/10 transition-colors" />
-                                <div className="flex h-full items-center justify-center text-gray-300 font-bold uppercase tracking-widest text-xs">
-                                    {crop} Image
-                                </div>
-                            </div>
-                            <h3 className="font-bold text-gray-800 text-lg group-hover:text-nirmal-green transition-colors">{crop}</h3>
-                            <p className="text-gray-500 text-sm">Hybrid & Improved Varieties</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
+            <MainCategoryContent
+                title="VEGETABLE"
+                titleHighlight="SEEDS"
+                description="A rapidly growing segment supported by advanced breeding programs targeting global distribution and high-yield disease resistance. We offer high-quality vegetable seeds targeting both domestic and global markets."
+                crops={dummyCrops}
+            />
         </main>
     );
 }

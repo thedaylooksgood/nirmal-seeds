@@ -4,13 +4,13 @@ import { boardOfDirectorsData } from "@/features/management-page/data"
 
 export function ManagementSection() {
     return (
-        <section className="w-full bg-gradient-to-b from-[#cae3c9] via-[#e5f1e4] to-[#ffffff] py-12 sm:py-16 md:py-20">
+        <section className="w-full py-10 sm:py-14" style={{ background: 'linear-gradient(to bottom, #dbebc7 0%, #ebf5df 15%, #ffffff 40%)' }}>
             <div className="section-container max-w-[1000px]">
                 {/* Title */}
-                <div className="text-center mb-12 flex flex-col items-center">
+                <div className="text-center mb-8 flex flex-col items-center">
                     <Text
                         as="h2"
-                        className="text-[28px] sm:text-[34px] md:text-[38px] lg:text-[42px] text-[#111] leading-tight"
+                        className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] text-[#111] leading-tight"
                     >
                         <span className="font-light tracking-wide block">{boardOfDirectorsData.title1}</span>
                         <span className="font-bold tracking-wide block">{boardOfDirectorsData.title2}</span>
@@ -22,15 +22,19 @@ export function ManagementSection() {
                     {boardOfDirectorsData.directors.map((director, index) => (
                         <div
                             key={index}
-                            className={`flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-14 ${index !== 0 ? "pt-8 mt-8 border-t border-dashed border-[#8cc63f]" : ""
+                            className={`flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-14 ${index !== 0 ? "pt-8 mt-6 border-t-4 border-dotted border-[#8cc63f]" : ""
                                 }`}
                         >
-                            {/* Left: Image */}
-                            <div className="w-[120px] sm:w-[140px] md:w-[150px] flex-shrink-0">
+                            {/* Left: Image (No borders, precise user-defined framing zooms) */}
+                            <div className="w-[140px] sm:w-[150px] md:w-[160px] h-[160px] sm:h-[180px] md:h-[190px] flex-shrink-0 overflow-hidden relative rounded-sm shadow-[0px_4px_12px_rgba(0,0,0,0.1)]">
                                 <img
                                     src={director.image}
                                     alt={director.name}
-                                    className="w-full h-[150px] md:h-[180px] object-cover rounded-sm shadow-sm"
+                                    className="w-full h-full object-cover"
+                                    style={director.imageTransform ? {
+                                        transform: director.imageTransform,
+                                        transformOrigin: 'center center'
+                                    } : undefined}
                                 />
                             </div>
 
@@ -47,7 +51,7 @@ export function ManagementSection() {
                                 </div>
 
                                 {/* Description */}
-                                <p className="text-[12px] sm:text-[13px] leading-[1.7] text-justify font-medium text-[#111]">
+                                <p className="text-[13px] sm:text-[14px] md:text-[15px] leading-[1.4] text-justify font-medium text-[#111]">
                                     {director.description}
                                 </p>
                             </div>

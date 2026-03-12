@@ -39,7 +39,14 @@ export function CompanyAtAGlance() {
             <div className="bg-nirmal-yellow py-8 relative">
                 <div className="section-container relative z-10">
                     <GenericCarousel
-                        options={{ align: "start", loop: true, slidesToScroll: 1 }}
+                        options={{ 
+                            align: "start", 
+                            loop: true, 
+                            slidesToScroll: 1,
+                            breakpoints: {
+                                '(min-width: 768px)': { slidesToScroll: 3 }
+                            }
+                        }}
                         navigationClassName="!bg-black hover:bg-black/90 !rounded-none !w-9 !h-9 sm:!w-11 sm:!h-11 !border-none !text-nirmal-yellow !opacity-100 !visible z-20 flex items-center justify-center"
                         prevButtonClassName="!left-0"
                         nextButtonClassName="!right-0"
@@ -65,9 +72,9 @@ export function CompanyAtAGlance() {
                                         </Text>
                                     </div>
                                 </div>
-                                {/* Vertical Divider - visible on desktop between items */}
-                                {index < companyGlanceData.items.length - 1 && (
-                                    <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[1.5px] h-[75px] lg:h-[85px] bg-black/90" />
+                                {/* Vertical Divider - visible on desktop, exactly 2 between 3 items */}
+                                {index % 3 !== 2 && (
+                                    <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[1.5px] h-[75px] lg:h-[85px] bg-black/90 z-10" />
                                 )}
                             </div>
                         ))}

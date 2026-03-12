@@ -1,6 +1,6 @@
 import { InnerPageHeroBanner } from "@/components/ui/InnerPageHeroBanner"
-import { FieldCropsContent } from "@/features/products-page/components/FieldCropsContent"
-import { fieldCropsHeroData } from "@/features/products-page/field-crops-data"
+import { MainCategoryContent } from "@/features/products-page/components/MainCategoryContent"
+import { fieldCropsHeroData, fieldCropsContentData } from "@/features/products-page/field-crops-data"
 
 export const metadata = {
     title: "Field Crop Seeds - Nirmal Seeds",
@@ -15,7 +15,12 @@ export default function FieldCropsPage() {
                 breadcrumb={fieldCropsHeroData.breadcrumb}
                 backgroundImage={fieldCropsHeroData.backgroundImage}
             />
-            <FieldCropsContent />
+            <MainCategoryContent
+                title={fieldCropsContentData.title}
+                titleHighlight={fieldCropsContentData.titleHighlight}
+                description={fieldCropsContentData.description}
+                crops={fieldCropsContentData.crops}
+            />
         </main>
     )
 }

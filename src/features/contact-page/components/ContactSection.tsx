@@ -8,28 +8,25 @@ export function ContactSection() {
         <section className="w-full bg-white py-10 sm:py-12 md:py-16">
             <div className="section-container">
                 {/* Title */}
-                <div className="text-center mb-10 md:mb-12">
+                <div className="text-center mb-10 md:mb-14">
                     <Text
                         as="h1"
-                        className="text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-bold tracking-wide leading-tight !text-[#111]"
+                        className="text-[32px] sm:text-[38px] md:text-[46px] lg:text-[52px] tracking-wide leading-tight uppercase"
                     >
-                        GET{" "}
-                        <span className="italic font-bold text-nirmal-darkgreen">
-                            IN TOUCH
-                        </span>
+                        <span className="font-light text-nirmal-green">GET </span>
+                        <span className="font-bold text-nirmal-green">IN TOUCH</span>
                     </Text>
-                    <div className="w-20 h-[3px] bg-nirmal-yellow mx-auto mt-3 rounded-full" />
                 </div>
 
                 {/* Two column layout: Info + Form */}
-                <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 max-w-4xl mx-auto">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 max-w-[1000px] mx-auto">
                     {/* Left - Contact Info */}
-                    <div className="w-full lg:w-[42%]">
+                    <div className="w-full lg:w-[50%]">
                         <ContactInfo />
                     </div>
 
                     {/* Right - Contact Form */}
-                    <div className="w-full lg:w-[58%]">
+                    <div className="w-full lg:w-[50%]">
                         <ContactForm />
                     </div>
                 </div>
