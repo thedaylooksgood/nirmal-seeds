@@ -61,23 +61,12 @@ export function FieldCropsContent() {
                 }}
             >
                 <div className="section-container">
-                    {/* Main 4-column grid */}
+                    {/* Single unified grid — all crops */}
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-5 gap-y-6">
-                        {crops.slice(0, 8).map((crop, index) => (
+                        {crops.map((crop, index) => (
                             <CropCard key={index} crop={crop} />
                         ))}
                     </div>
-
-                    {/* Last row - centered */}
-                    {crops.length > 8 && (
-                        <div className="flex justify-center gap-x-5 mt-6">
-                            {crops.slice(8).map((crop, index) => (
-                                <div key={index} className="w-[calc(25%-15px)]">
-                                    <CropCard crop={crop} />
-                                </div>
-                            ))}
-                        </div>
-                    )}
                 </div>
             </section>
         </>
